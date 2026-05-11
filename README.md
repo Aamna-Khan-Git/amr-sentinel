@@ -98,7 +98,7 @@ orchestrator.ask()
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/amr-sentinel.git
+git clone https://github.com/Aamna-Khan-Git/amr-sentinel.git
 cd amr-sentinel
 python3 -m venv venv
 source venv/bin/activate
