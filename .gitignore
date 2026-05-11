@@ -8,3 +8,15 @@ data/embeddings/
 *.sqlite
 *.db
 
+.env
+amr_sentinel.db
+chroma_store/
+venv/
+__pycache__/
+*.pyc
+data/processed/
+data/embeddings/
+*.log
+.DS_Store
+17950222/
+data/abstracts.jsonl

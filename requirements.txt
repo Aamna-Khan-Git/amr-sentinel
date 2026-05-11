@@ -16,3 +16,23 @@ python-dotenv==1.0.1
 openpyxl==3.1.5
 biopython==1.84
 reportlab==4.2.5
+# AMR Sentinel – Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core ML / embeddings ──────────────────────────────────────────────────
+sentence-transformers>=2.7.0
+chromadb>=0.5.0
+
+# ── Anthropic SDK ─────────────────────────────────────────────────────────
+anthropic>=0.28.0
+
+# ── Data handling ─────────────────────────────────────────────────────────
+pandas>=2.0.0
+
+# ── API server ────────────────────────────────────────────────────────────
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
+
+# ── Optional Streamlit UI ─────────────────────────────────────────────────
+streamlit>=1.35.0
