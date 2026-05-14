@@ -234,7 +234,7 @@ python3 amr_pipeline.py
 | Component | Technology |
 |---|---|
 | LLM (intent parsing) | Claude Haiku (`claude-haiku-4-5`) |
-| LLM (narrative + recommendations) | Claude Sonnet (`claude-sonnet-4-5`) |
+| LLM (narrative + recommendations) | Claude Opus (`claude-opus-4-5`) |
 | Structured data store | SQLite + pandas |
 | Vector search | ChromaDB + `all-MiniLM-L6-v2` |
 | ML pipeline | scikit-learn (clustering, regression) |
