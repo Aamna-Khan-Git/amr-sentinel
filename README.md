@@ -1,4 +1,3 @@
-cat > ~/amr-sentinel/README.md << 'MDEOF'
 # 🦠 AMR Sentinel
 
 An agentic AI assistant for European Antimicrobial Resistance (AMR) surveillance — grounded in real EARS-Net/EFSA data, supporting One Health queries across human, animal, and food chain domains.
