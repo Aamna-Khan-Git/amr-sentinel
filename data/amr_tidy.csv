@@ -1,0 +1,1004 @@
+country,year,organism,antibiotic,pct_resistant,total_isolates,source_type,source
+EU/EEA,2020,A. baumannii,CAR,2.8,0,,ECDC_PDF
+EU/EEA,2020,A. baumannii,CAR,2.46,0,,ECDC_PDF
+EU/EEA,2021,A. baumannii,CAR,3.99,0,,ECDC_PDF
+EU/EEA,2021,A. baumannii,CAR,3.5,0,,ECDC_PDF
+EU/EEA,2022,A. baumannii,CAR,2.71,0,,ECDC_PDF
+EU/EEA,2022,A. baumannii,CAR,2.31,0,,ECDC_PDF
+EU/EEA,2023,A. baumannii,CAR,2.5,0,,ECDC_PDF
+EU/EEA,2023,A. baumannii,CAR,2.15,0,,ECDC_PDF
+EU/EEA,2024,A. baumannii,CAR,2.49,0,,ECDC_PDF
+EU/EEA,2024,A. baumannii,CAR,2.03,0,,ECDC_PDF
+EU/EEA,2020,A. baumannii,CIP,2.92,0,,ECDC_PDF
+EU/EEA,2021,A. baumannii,CIP,4.14,0,,ECDC_PDF
+EU/EEA,2022,A. baumannii,CIP,2.81,0,,ECDC_PDF
+EU/EEA,2023,A. baumannii,CIP,2.55,0,,ECDC_PDF
+EU/EEA,2024,A. baumannii,CIP,2.5,0,,ECDC_PDF
+EU/EEA,2020,A. baumannii,GEN,2.6,0,,ECDC_PDF
+EU/EEA,2021,A. baumannii,GEN,3.68,0,,ECDC_PDF
+EU/EEA,2022,A. baumannii,GEN,2.46,0,,ECDC_PDF
+EU/EEA,2023,A. baumannii,GEN,2.25,0,,ECDC_PDF
+EU/EEA,2024,A. baumannii,GEN,2.13,0,,ECDC_PDF
+Austria,2015,E. coli,AMP,12.9,0,animal_pig,EFSA
+Belgium,2015,E. coli,AMP,35.5,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,AMP,57.1,0,animal_pig,EFSA
+Croatia,2015,E. coli,AMP,32.9,0,animal_pig,EFSA
+Cyprus,2015,E. coli,AMP,89.1,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,AMP,34.8,0,animal_pig,EFSA
+Denmark,2015,E. coli,AMP,31.6,0,animal_pig,EFSA
+EU/EEA,2020,E. coli,AMP,25.58,0,,ECDC_PDF
+EU/EEA,2020,E. coli,AMP,54.6,0,,ECDC_PDF
+EU/EEA,2021,E. coli,AMP,24.09,0,,ECDC_PDF
+EU/EEA,2021,E. coli,AMP,53.2,0,,ECDC_PDF
+EU/EEA,2022,E. coli,AMP,25.62,0,,ECDC_PDF
+EU/EEA,2022,E. coli,AMP,53.4,0,,ECDC_PDF
+EU/EEA,2023,E. coli,AMP,27.67,0,,ECDC_PDF
+EU/EEA,2023,E. coli,AMP,54.5,0,,ECDC_PDF
+EU/EEA,2024,E. coli,AMP,31.68,0,,ECDC_PDF
+EU/EEA,2024,E. coli,AMP,54.7,0,,ECDC_PDF
+Estonia,2015,E. coli,AMP,31.8,0,animal_pig,EFSA
+Finland,2015,E. coli,AMP,14.3,0,animal_pig,EFSA
+France,2015,E. coli,AMP,19.5,0,animal_pig,EFSA
+Germany,2015,E. coli,AMP,33.0,0,animal_pig,EFSA
+Greece,2015,E. coli,AMP,57.8,0,animal_pig,EFSA
+Hungary,2015,E. coli,AMP,39.4,0,animal_pig,EFSA
+Ireland,2015,E. coli,AMP,25.2,0,animal_pig,EFSA
+Italy,2015,E. coli,AMP,63.7,0,animal_pig,EFSA
+Latvia,2015,E. coli,AMP,26.7,0,animal_pig,EFSA
+Lithuania,2015,E. coli,AMP,34.8,0,animal_pig,EFSA
+Malta,2015,E. coli,AMP,25.0,0,animal_pig,EFSA
+Netherlands,2015,E. coli,AMP,28.9,0,animal_pig,EFSA
+Norway,2015,E. coli,AMP,11.1,0,animal_pig,EFSA
+Poland,2015,E. coli,AMP,35.9,0,animal_pig,EFSA
+Portugal,2015,E. coli,AMP,74.7,0,animal_pig,EFSA
+Romania,2015,E. coli,AMP,67.2,0,animal_pig,EFSA
+Slovakia,2015,E. coli,AMP,31.8,0,animal_pig,EFSA
+Slovenia,2015,E. coli,AMP,22.4,0,animal_pig,EFSA
+Spain,2015,E. coli,AMP,82.4,0,animal_pig,EFSA
+Sweden,2015,E. coli,AMP,20.5,0,animal_pig,EFSA
+Switzerland,2015,E. coli,AMP,17.0,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,AMP,35.3,0,animal_pig,EFSA
+Austria,2015,E. coli,AZITHROMYC,0.5,0,animal_pig,EFSA
+Belgium,2015,E. coli,AZITHROMYC,4.1,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,AZITHROMYC,4.8,0,animal_pig,EFSA
+Croatia,2015,E. coli,AZITHROMYC,1.4,0,animal_pig,EFSA
+Cyprus,2015,E. coli,AZITHROMYC,45.5,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,AZITHROMYC,1.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,AZITHROMYC,0.6,0,animal_pig,EFSA
+Estonia,2015,E. coli,AZITHROMYC,1.2,0,animal_pig,EFSA
+Finland,2015,E. coli,AZITHROMYC,0.3,0,animal_pig,EFSA
+France,2015,E. coli,AZITHROMYC,0.5,0,animal_pig,EFSA
+Germany,2015,E. coli,AZITHROMYC,2.4,0,animal_pig,EFSA
+Greece,2015,E. coli,AZITHROMYC,2.6,0,animal_pig,EFSA
+Hungary,2015,E. coli,AZITHROMYC,0.6,0,animal_pig,EFSA
+Ireland,2015,E. coli,AZITHROMYC,1.4,0,animal_pig,EFSA
+Italy,2015,E. coli,AZITHROMYC,1.8,0,animal_pig,EFSA
+Latvia,2015,E. coli,AZITHROMYC,1.5,0,animal_pig,EFSA
+Lithuania,2015,E. coli,AZITHROMYC,2.2,0,animal_pig,EFSA
+Netherlands,2015,E. coli,AZITHROMYC,1.0,0,animal_pig,EFSA
+Norway,2015,E. coli,AZITHROMYC,0.8,0,animal_pig,EFSA
+Portugal,2015,E. coli,AZITHROMYC,14.6,0,animal_pig,EFSA
+Romania,2015,E. coli,AZITHROMYC,7.8,0,animal_pig,EFSA
+Slovakia,2015,E. coli,AZITHROMYC,1.2,0,animal_pig,EFSA
+Slovenia,2015,E. coli,AZITHROMYC,1.2,0,animal_pig,EFSA
+Spain,2015,E. coli,AZITHROMYC,2.9,0,animal_pig,EFSA
+Sweden,2015,E. coli,AZITHROMYC,0.5,0,animal_pig,EFSA
+Switzerland,2015,E. coli,AZITHROMYC,0.5,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,AZITHROMYC,1.2,0,animal_pig,EFSA
+Austria,2015,E. coli,C3G,2.5,0,animal_pig,EFSA
+Belgium,2015,E. coli,C3G,1.1,0,animal_pig,EFSA
+Cyprus,2015,E. coli,C3G,5.5,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,C3G,2.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,C3G,0.7,0,animal_pig,EFSA
+EU/EEA,2020,E. coli,C3G,8.33,0,,ECDC_PDF
+EU/EEA,2020,E. coli,C3G,2.78,0,,ECDC_PDF
+EU/EEA,2020,E. coli,C3G,14.9,0,,ECDC_PDF
+EU/EEA,2021,E. coli,C3G,7.28,0,,ECDC_PDF
+EU/EEA,2021,E. coli,C3G,2.33,0,,ECDC_PDF
+EU/EEA,2021,E. coli,C3G,13.9,0,,ECDC_PDF
+EU/EEA,2022,E. coli,C3G,8.21,0,,ECDC_PDF
+EU/EEA,2022,E. coli,C3G,2.58,0,,ECDC_PDF
+EU/EEA,2022,E. coli,C3G,14.3,0,,ECDC_PDF
+EU/EEA,2023,E. coli,C3G,9.37,0,,ECDC_PDF
+EU/EEA,2023,E. coli,C3G,2.99,0,,ECDC_PDF
+EU/EEA,2023,E. coli,C3G,15.2,0,,ECDC_PDF
+EU/EEA,2024,E. coli,C3G,10.96,0,,ECDC_PDF
+EU/EEA,2024,E. coli,C3G,3.31,0,,ECDC_PDF
+EU/EEA,2024,E. coli,C3G,16.0,0,,ECDC_PDF
+Estonia,2015,E. coli,C3G,1.2,0,animal_pig,EFSA
+France,2015,E. coli,C3G,0.5,0,animal_pig,EFSA
+Germany,2015,E. coli,C3G,3.3,0,animal_pig,EFSA
+Greece,2015,E. coli,C3G,5.2,0,animal_pig,EFSA
+Hungary,2015,E. coli,C3G,1.2,0,animal_pig,EFSA
+Ireland,2015,E. coli,C3G,0.7,0,animal_pig,EFSA
+Italy,2015,E. coli,C3G,0.6,0,animal_pig,EFSA
+Netherlands,2015,E. coli,C3G,0.3,0,animal_pig,EFSA
+Norway,2015,E. coli,C3G,0.7,0,animal_pig,EFSA
+Poland,2015,E. coli,C3G,4.1,0,animal_pig,EFSA
+Portugal,2015,E. coli,C3G,5.1,0,animal_pig,EFSA
+Romania,2015,E. coli,C3G,1.5,0,animal_pig,EFSA
+Spain,2015,E. coli,C3G,0.6,0,animal_pig,EFSA
+Sweden,2015,E. coli,C3G,1.0,0,animal_pig,EFSA
+Switzerland,2015,E. coli,C3G,0.5,0,animal_pig,EFSA
+EU/EEA,2020,E. coli,CAR,0.08,0,,ECDC_PDF
+EU/EEA,2020,E. coli,CAR,0.2,0,,ECDC_PDF
+EU/EEA,2021,E. coli,CAR,0.07,0,,ECDC_PDF
+EU/EEA,2021,E. coli,CAR,0.2,0,,ECDC_PDF
+EU/EEA,2022,E. coli,CAR,0.11,0,,ECDC_PDF
+EU/EEA,2022,E. coli,CAR,0.2,0,,ECDC_PDF
+EU/EEA,2023,E. coli,CAR,0.13,0,,ECDC_PDF
+EU/EEA,2023,E. coli,CAR,0.3,0,,ECDC_PDF
+EU/EEA,2024,E. coli,CAR,0.15,0,,ECDC_PDF
+EU/EEA,2024,E. coli,CAR,0.3,0,,ECDC_PDF
+Austria,2015,E. coli,CEFTAZIDIM,1.8,0,animal_pig,EFSA
+Belgium,2015,E. coli,CEFTAZIDIM,1.1,0,animal_pig,EFSA
+Cyprus,2015,E. coli,CEFTAZIDIM,5.5,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,CEFTAZIDIM,1.6,0,animal_pig,EFSA
+Estonia,2015,E. coli,CEFTAZIDIM,1.2,0,animal_pig,EFSA
+France,2015,E. coli,CEFTAZIDIM,0.5,0,animal_pig,EFSA
+Germany,2015,E. coli,CEFTAZIDIM,3.3,0,animal_pig,EFSA
+Greece,2015,E. coli,CEFTAZIDIM,5.2,0,animal_pig,EFSA
+Hungary,2015,E. coli,CEFTAZIDIM,1.2,0,animal_pig,EFSA
+Ireland,2015,E. coli,CEFTAZIDIM,0.7,0,animal_pig,EFSA
+Italy,2015,E. coli,CEFTAZIDIM,1.8,0,animal_pig,EFSA
+Netherlands,2015,E. coli,CEFTAZIDIM,0.3,0,animal_pig,EFSA
+Norway,2015,E. coli,CEFTAZIDIM,0.4,0,animal_pig,EFSA
+Poland,2015,E. coli,CEFTAZIDIM,4.7,0,animal_pig,EFSA
+Portugal,2015,E. coli,CEFTAZIDIM,5.1,0,animal_pig,EFSA
+Romania,2015,E. coli,CEFTAZIDIM,1.5,0,animal_pig,EFSA
+Spain,2015,E. coli,CEFTAZIDIM,0.6,0,animal_pig,EFSA
+Switzerland,2015,E. coli,CEFTAZIDIM,0.5,0,animal_pig,EFSA
+Austria,2015,E. coli,CHL,3.7,0,animal_pig,EFSA
+Belgium,2015,E. coli,CHL,17.7,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,CHL,52.4,0,animal_pig,EFSA
+Croatia,2015,E. coli,CHL,10.6,0,animal_pig,EFSA
+Cyprus,2015,E. coli,CHL,69.1,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,CHL,8.6,0,animal_pig,EFSA
+Denmark,2015,E. coli,CHL,2.3,0,animal_pig,EFSA
+Estonia,2015,E. coli,CHL,9.4,0,animal_pig,EFSA
+Finland,2015,E. coli,CHL,0.9,0,animal_pig,EFSA
+France,2015,E. coli,CHL,12.0,0,animal_pig,EFSA
+Germany,2015,E. coli,CHL,6.6,0,animal_pig,EFSA
+Greece,2015,E. coli,CHL,36.2,0,animal_pig,EFSA
+Hungary,2015,E. coli,CHL,11.2,0,animal_pig,EFSA
+Ireland,2015,E. coli,CHL,10.2,0,animal_pig,EFSA
+Italy,2015,E. coli,CHL,32.7,0,animal_pig,EFSA
+Latvia,2015,E. coli,CHL,8.0,0,animal_pig,EFSA
+Lithuania,2015,E. coli,CHL,11.2,0,animal_pig,EFSA
+Malta,2015,E. coli,CHL,10.3,0,animal_pig,EFSA
+Netherlands,2015,E. coli,CHL,9.4,0,animal_pig,EFSA
+Norway,2015,E. coli,CHL,2.2,0,animal_pig,EFSA
+Poland,2015,E. coli,CHL,12.4,0,animal_pig,EFSA
+Portugal,2015,E. coli,CHL,52.0,0,animal_pig,EFSA
+Romania,2015,E. coli,CHL,40.9,0,animal_pig,EFSA
+Slovakia,2015,E. coli,CHL,15.3,0,animal_pig,EFSA
+Slovenia,2015,E. coli,CHL,7.1,0,animal_pig,EFSA
+Spain,2015,E. coli,CHL,40.0,0,animal_pig,EFSA
+Sweden,2015,E. coli,CHL,3.0,0,animal_pig,EFSA
+Switzerland,2015,E. coli,CHL,8.2,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,CHL,28.2,0,animal_pig,EFSA
+Austria,2015,E. coli,CIP,4.9,0,animal_pig,EFSA
+Belgium,2015,E. coli,CIP,2.2,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,CIP,47.6,0,animal_pig,EFSA
+Croatia,2015,E. coli,CIP,7.1,0,animal_pig,EFSA
+Cyprus,2015,E. coli,CIP,43.6,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,CIP,2.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,CIP,1.1,0,animal_pig,EFSA
+EU/EEA,2020,E. coli,CIP,13.48,0,,ECDC_PDF
+EU/EEA,2020,E. coli,CIP,23.8,0,,ECDC_PDF
+EU/EEA,2020,E. coli,CIP,5.7,0,,ECDC_PDF
+EU/EEA,2021,E. coli,CIP,11.78,0,,ECDC_PDF
+EU/EEA,2021,E. coli,CIP,22.0,0,,ECDC_PDF
+EU/EEA,2021,E. coli,CIP,5.1,0,,ECDC_PDF
+EU/EEA,2022,E. coli,CIP,12.73,0,,ECDC_PDF
+EU/EEA,2022,E. coli,CIP,22.0,0,,ECDC_PDF
+EU/EEA,2022,E. coli,CIP,5.1,0,,ECDC_PDF
+EU/EEA,2023,E. coli,CIP,14.17,0,,ECDC_PDF
+EU/EEA,2023,E. coli,CIP,22.5,0,,ECDC_PDF
+EU/EEA,2023,E. coli,CIP,5.5,0,,ECDC_PDF
+EU/EEA,2024,E. coli,CIP,15.71,0,,ECDC_PDF
+EU/EEA,2024,E. coli,CIP,22.5,0,,ECDC_PDF
+EU/EEA,2024,E. coli,CIP,5.5,0,,ECDC_PDF
+Estonia,2015,E. coli,CIP,7.1,0,animal_pig,EFSA
+Finland,2015,E. coli,CIP,0.5,0,animal_pig,EFSA
+France,2015,E. coli,CIP,4.5,0,animal_pig,EFSA
+Germany,2015,E. coli,CIP,4.2,0,animal_pig,EFSA
+Greece,2015,E. coli,CIP,12.1,0,animal_pig,EFSA
+Hungary,2015,E. coli,CIP,8.2,0,animal_pig,EFSA
+Ireland,2015,E. coli,CIP,2.7,0,animal_pig,EFSA
+Italy,2015,E. coli,CIP,14.9,0,animal_pig,EFSA
+Latvia,2015,E. coli,CIP,5.3,0,animal_pig,EFSA
+Lithuania,2015,E. coli,CIP,10.1,0,animal_pig,EFSA
+Malta,2015,E. coli,CIP,5.9,0,animal_pig,EFSA
+Netherlands,2015,E. coli,CIP,0.7,0,animal_pig,EFSA
+Norway,2015,E. coli,CIP,0.7,0,animal_pig,EFSA
+Poland,2015,E. coli,CIP,15.9,0,animal_pig,EFSA
+Portugal,2015,E. coli,CIP,20.7,0,animal_pig,EFSA
+Romania,2015,E. coli,CIP,29.6,0,animal_pig,EFSA
+Slovakia,2015,E. coli,CIP,7.1,0,animal_pig,EFSA
+Slovenia,2015,E. coli,CIP,2.4,0,animal_pig,EFSA
+Spain,2015,E. coli,CIP,49.4,0,animal_pig,EFSA
+Sweden,2015,E. coli,CIP,2.5,0,animal_pig,EFSA
+Switzerland,2015,E. coli,CIP,3.3,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,CIP,2.4,0,animal_pig,EFSA
+Austria,2015,E. coli,COL,0.6,0,animal_pig,EFSA
+Belgium,2015,E. coli,COL,2.0,0,animal_pig,EFSA
+Denmark,2015,E. coli,COL,0.6,0,animal_pig,EFSA
+France,2015,E. coli,COL,1.5,0,animal_pig,EFSA
+Germany,2015,E. coli,COL,0.5,0,animal_pig,EFSA
+Italy,2015,E. coli,COL,0.6,0,animal_pig,EFSA
+Latvia,2015,E. coli,COL,0.7,0,animal_pig,EFSA
+Lithuania,2015,E. coli,COL,2.2,0,animal_pig,EFSA
+Portugal,2015,E. coli,COL,2.5,0,animal_pig,EFSA
+Romania,2015,E. coli,COL,0.5,0,animal_pig,EFSA
+Spain,2015,E. coli,COL,2.9,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,COL,0.6,0,animal_pig,EFSA
+Austria,2015,E. coli,GEN,2.5,0,animal_pig,EFSA
+Belgium,2015,E. coli,GEN,1.6,0,animal_pig,EFSA
+Croatia,2015,E. coli,GEN,3.5,0,animal_pig,EFSA
+Cyprus,2015,E. coli,GEN,21.8,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,GEN,3.2,0,animal_pig,EFSA
+Denmark,2015,E. coli,GEN,1.1,0,animal_pig,EFSA
+EU/EEA,2020,E. coli,GEN,5.76,0,,ECDC_PDF
+EU/EEA,2020,E. coli,GEN,10.9,0,,ECDC_PDF
+EU/EEA,2021,E. coli,GEN,4.8,0,,ECDC_PDF
+EU/EEA,2021,E. coli,GEN,9.7,0,,ECDC_PDF
+EU/EEA,2022,E. coli,GEN,5.23,0,,ECDC_PDF
+EU/EEA,2022,E. coli,GEN,9.6,0,,ECDC_PDF
+EU/EEA,2023,E. coli,GEN,5.99,0,,ECDC_PDF
+EU/EEA,2023,E. coli,GEN,10.3,0,,ECDC_PDF
+EU/EEA,2024,E. coli,GEN,6.68,0,,ECDC_PDF
+EU/EEA,2024,E. coli,GEN,10.4,0,,ECDC_PDF
+Estonia,2015,E. coli,GEN,1.2,0,animal_pig,EFSA
+Finland,2015,E. coli,GEN,0.9,0,animal_pig,EFSA
+France,2015,E. coli,GEN,2.0,0,animal_pig,EFSA
+Germany,2015,E. coli,GEN,3.3,0,animal_pig,EFSA
+Greece,2015,E. coli,GEN,3.4,0,animal_pig,EFSA
+Hungary,2015,E. coli,GEN,2.4,0,animal_pig,EFSA
+Ireland,2015,E. coli,GEN,2.0,0,animal_pig,EFSA
+Italy,2015,E. coli,GEN,4.2,0,animal_pig,EFSA
+Latvia,2015,E. coli,GEN,4.0,0,animal_pig,EFSA
+Lithuania,2015,E. coli,GEN,3.4,0,animal_pig,EFSA
+Malta,2015,E. coli,GEN,4.4,0,animal_pig,EFSA
+Netherlands,2015,E. coli,GEN,0.7,0,animal_pig,EFSA
+Poland,2015,E. coli,GEN,1.8,0,animal_pig,EFSA
+Portugal,2015,E. coli,GEN,2.0,0,animal_pig,EFSA
+Romania,2015,E. coli,GEN,9.0,0,animal_pig,EFSA
+Slovakia,2015,E. coli,GEN,3.5,0,animal_pig,EFSA
+Spain,2015,E. coli,GEN,3.5,0,animal_pig,EFSA
+Sweden,2015,E. coli,GEN,0.5,0,animal_pig,EFSA
+Switzerland,2015,E. coli,GEN,1.6,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,GEN,7.6,0,animal_pig,EFSA
+Austria,2015,E. coli,NAL,3.1,0,animal_pig,EFSA
+Belgium,2015,E. coli,NAL,1.6,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,NAL,23.8,0,animal_pig,EFSA
+Croatia,2015,E. coli,NAL,10.6,0,animal_pig,EFSA
+Cyprus,2015,E. coli,NAL,21.8,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,NAL,1.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,NAL,0.6,0,animal_pig,EFSA
+Estonia,2015,E. coli,NAL,4.7,0,animal_pig,EFSA
+Finland,2015,E. coli,NAL,0.5,0,animal_pig,EFSA
+France,2015,E. coli,NAL,4.5,0,animal_pig,EFSA
+Germany,2015,E. coli,NAL,2.4,0,animal_pig,EFSA
+Greece,2015,E. coli,NAL,8.6,0,animal_pig,EFSA
+Hungary,2015,E. coli,NAL,6.5,0,animal_pig,EFSA
+Ireland,2015,E. coli,NAL,2.0,0,animal_pig,EFSA
+Italy,2015,E. coli,NAL,6.5,0,animal_pig,EFSA
+Latvia,2015,E. coli,NAL,4.0,0,animal_pig,EFSA
+Lithuania,2015,E. coli,NAL,7.9,0,animal_pig,EFSA
+Malta,2015,E. coli,NAL,4.4,0,animal_pig,EFSA
+Netherlands,2015,E. coli,NAL,0.7,0,animal_pig,EFSA
+Norway,2015,E. coli,NAL,0.7,0,animal_pig,EFSA
+Poland,2015,E. coli,NAL,6.5,0,animal_pig,EFSA
+Portugal,2015,E. coli,NAL,9.1,0,animal_pig,EFSA
+Romania,2015,E. coli,NAL,16.0,0,animal_pig,EFSA
+Slovakia,2015,E. coli,NAL,7.1,0,animal_pig,EFSA
+Spain,2015,E. coli,NAL,25.9,0,animal_pig,EFSA
+Sweden,2015,E. coli,NAL,2.0,0,animal_pig,EFSA
+Switzerland,2015,E. coli,NAL,3.3,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,NAL,1.2,0,animal_pig,EFSA
+Austria,2015,E. coli,SUL,22.7,0,animal_pig,EFSA
+Belgium,2015,E. coli,SUL,43.0,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,SUL,90.5,0,animal_pig,EFSA
+Croatia,2015,E. coli,SUL,40.0,0,animal_pig,EFSA
+Cyprus,2015,E. coli,SUL,98.2,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,SUL,36.9,0,animal_pig,EFSA
+Denmark,2015,E. coli,SUL,35.6,0,animal_pig,EFSA
+Estonia,2015,E. coli,SUL,34.1,0,animal_pig,EFSA
+Finland,2015,E. coli,SUL,17.1,0,animal_pig,EFSA
+France,2015,E. coli,SUL,41.0,0,animal_pig,EFSA
+Germany,2015,E. coli,SUL,35.4,0,animal_pig,EFSA
+Greece,2015,E. coli,SUL,64.7,0,animal_pig,EFSA
+Hungary,2015,E. coli,SUL,30.0,0,animal_pig,EFSA
+Ireland,2015,E. coli,SUL,44.2,0,animal_pig,EFSA
+Italy,2015,E. coli,SUL,63.1,0,animal_pig,EFSA
+Latvia,2015,E. coli,SUL,29.3,0,animal_pig,EFSA
+Lithuania,2015,E. coli,SUL,43.8,0,animal_pig,EFSA
+Malta,2015,E. coli,SUL,42.6,0,animal_pig,EFSA
+Netherlands,2015,E. coli,SUL,40.3,0,animal_pig,EFSA
+Norway,2015,E. coli,SUL,14.1,0,animal_pig,EFSA
+Poland,2015,E. coli,SUL,36.5,0,animal_pig,EFSA
+Portugal,2015,E. coli,SUL,76.8,0,animal_pig,EFSA
+Romania,2015,E. coli,SUL,63.4,0,animal_pig,EFSA
+Slovakia,2015,E. coli,SUL,34.1,0,animal_pig,EFSA
+Slovenia,2015,E. coli,SUL,15.3,0,animal_pig,EFSA
+Spain,2015,E. coli,SUL,75.9,0,animal_pig,EFSA
+Sweden,2015,E. coli,SUL,25.0,0,animal_pig,EFSA
+Switzerland,2015,E. coli,SUL,41.8,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,SUL,54.7,0,animal_pig,EFSA
+Austria,2015,E. coli,TET,47.2,0,animal_pig,EFSA
+Belgium,2015,E. coli,TET,40.3,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,TET,76.2,0,animal_pig,EFSA
+Croatia,2015,E. coli,TET,56.5,0,animal_pig,EFSA
+Cyprus,2015,E. coli,TET,100.0,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,TET,48.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,TET,35.6,0,animal_pig,EFSA
+Estonia,2015,E. coli,TET,41.2,0,animal_pig,EFSA
+Finland,2015,E. coli,TET,21.2,0,animal_pig,EFSA
+France,2015,E. coli,TET,54.5,0,animal_pig,EFSA
+Germany,2015,E. coli,TET,44.8,0,animal_pig,EFSA
+Greece,2015,E. coli,TET,79.3,0,animal_pig,EFSA
+Hungary,2015,E. coli,TET,68.2,0,animal_pig,EFSA
+Ireland,2015,E. coli,TET,59.2,0,animal_pig,EFSA
+Italy,2015,E. coli,TET,72.0,0,animal_pig,EFSA
+Latvia,2015,E. coli,TET,44.0,0,animal_pig,EFSA
+Lithuania,2015,E. coli,TET,51.7,0,animal_pig,EFSA
+Malta,2015,E. coli,TET,69.1,0,animal_pig,EFSA
+Netherlands,2015,E. coli,TET,45.3,0,animal_pig,EFSA
+Norway,2015,E. coli,TET,9.6,0,animal_pig,EFSA
+Poland,2015,E. coli,TET,48.2,0,animal_pig,EFSA
+Portugal,2015,E. coli,TET,89.4,0,animal_pig,EFSA
+Romania,2015,E. coli,TET,74.2,0,animal_pig,EFSA
+Slovakia,2015,E. coli,TET,48.2,0,animal_pig,EFSA
+Slovenia,2015,E. coli,TET,40.0,0,animal_pig,EFSA
+Spain,2015,E. coli,TET,89.4,0,animal_pig,EFSA
+Sweden,2015,E. coli,TET,10.0,0,animal_pig,EFSA
+Switzerland,2015,E. coli,TET,29.7,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,TET,67.6,0,animal_pig,EFSA
+Cyprus,2015,E. coli,TIGECYCLIN,14.5,0,animal_pig,EFSA
+Malta,2015,E. coli,TIGECYCLIN,1.5,0,animal_pig,EFSA
+Norway,2015,E. coli,TIGECYCLIN,0.7,0,animal_pig,EFSA
+Austria,2015,E. coli,TMP,10.4,0,animal_pig,EFSA
+Belgium,2015,E. coli,TMP,38.2,0,animal_pig,EFSA
+Bulgaria,2015,E. coli,TMP,28.6,0,animal_pig,EFSA
+Croatia,2015,E. coli,TMP,21.2,0,animal_pig,EFSA
+Cyprus,2015,E. coli,TMP,94.5,0,animal_pig,EFSA
+Czech Republic,2015,E. coli,TMP,25.1,0,animal_pig,EFSA
+Denmark,2015,E. coli,TMP,24.1,0,animal_pig,EFSA
+Estonia,2015,E. coli,TMP,25.9,0,animal_pig,EFSA
+Finland,2015,E. coli,TMP,15.2,0,animal_pig,EFSA
+France,2015,E. coli,TMP,34.5,0,animal_pig,EFSA
+Germany,2015,E. coli,TMP,25.9,0,animal_pig,EFSA
+Greece,2015,E. coli,TMP,56.9,0,animal_pig,EFSA
+Hungary,2015,E. coli,TMP,17.1,0,animal_pig,EFSA
+Ireland,2015,E. coli,TMP,36.7,0,animal_pig,EFSA
+Italy,2015,E. coli,TMP,58.3,0,animal_pig,EFSA
+Latvia,2015,E. coli,TMP,20.7,0,animal_pig,EFSA
+Lithuania,2015,E. coli,TMP,29.2,0,animal_pig,EFSA
+Malta,2015,E. coli,TMP,41.2,0,animal_pig,EFSA
+Netherlands,2015,E. coli,TMP,35.9,0,animal_pig,EFSA
+Norway,2015,E. coli,TMP,9.6,0,animal_pig,EFSA
+Poland,2015,E. coli,TMP,18.8,0,animal_pig,EFSA
+Portugal,2015,E. coli,TMP,68.7,0,animal_pig,EFSA
+Romania,2015,E. coli,TMP,47.6,0,animal_pig,EFSA
+Slovakia,2015,E. coli,TMP,22.4,0,animal_pig,EFSA
+Slovenia,2015,E. coli,TMP,14.1,0,animal_pig,EFSA
+Spain,2015,E. coli,TMP,74.7,0,animal_pig,EFSA
+Sweden,2015,E. coli,TMP,19.5,0,animal_pig,EFSA
+Switzerland,2015,E. coli,TMP,22.0,0,animal_pig,EFSA
+United Kingdom,2015,E. coli,TMP,47.1,0,animal_pig,EFSA
+EU/EEA,2020,"Klebsiella
+pneumoniae",C3G,6.75,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",C3G,3.83,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",C3G,33.9,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",C3G,6.95,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",C3G,4.03,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",C3G,34.3,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",C3G,7.16,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",C3G,4.05,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",C3G,32.8,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",C3G,8.32,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",C3G,4.67,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",C3G,33.5,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",C3G,9.03,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",C3G,4.84,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",C3G,32.9,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",CAR,2.34,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",CAR,10.0,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",CAR,2.69,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",CAR,11.7,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",CAR,2.62,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",CAR,10.9,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",CAR,3.35,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",CAR,11.5,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",CAR,3.46,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",CAR,11.3,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",CIP,6.74,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",CIP,33.9,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",CIP,21.0,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",CIP,6.77,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",CIP,33.6,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",CIP,21.3,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",CIP,6.9,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",CIP,32.1,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",CIP,20.0,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",CIP,7.93,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",CIP,32.2,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",CIP,19.9,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",CIP,8.53,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",CIP,31.4,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",CIP,18.8,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",GEN,4.36,0,,ECDC_PDF
+EU/EEA,2020,"Klebsiella
+pneumoniae",GEN,23.7,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",GEN,4.53,0,,ECDC_PDF
+EU/EEA,2021,"Klebsiella
+pneumoniae",GEN,23.8,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",GEN,4.6,0,,ECDC_PDF
+EU/EEA,2022,"Klebsiella
+pneumoniae",GEN,22.5,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",GEN,5.33,0,,ECDC_PDF
+EU/EEA,2023,"Klebsiella
+pneumoniae",GEN,22.5,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",GEN,5.58,0,,ECDC_PDF
+EU/EEA,2024,"Klebsiella
+pneumoniae",GEN,21.5,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CAR,1.6,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CAR,0.75,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CAR,17.9,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CAR,1.72,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CAR,0.87,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CAR,18.2,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CAR,1.82,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CAR,0.94,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CAR,18.7,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CAR,1.84,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CAR,0.96,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CAR,17.5,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CAR,1.74,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CAR,0.79,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CAR,15.9,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CEFTAZIDIME,1.4,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CEFTAZIDIME,15.5,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CEFTAZIDIME,1.49,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CEFTAZIDIME,15.9,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CEFTAZIDIME,1.58,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CEFTAZIDIME,16.2,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CEFTAZIDIME,1.61,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CEFTAZIDIME,15.2,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CEFTAZIDIME,1.52,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CEFTAZIDIME,13.8,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CIP,1.71,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",CIP,19.6,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CIP,1.75,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",CIP,18.8,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CIP,1.81,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",CIP,18.6,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CIP,1.81,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",CIP,17.2,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CIP,1.65,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",CIP,15.3,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",GEN,0.6,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",GEN,9.4,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",GEN,0.66,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",GEN,8.9,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",GEN,0.64,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",GEN,8.9,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",GEN,0.72,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",GEN,8.7,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",GEN,0.58,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",GEN,7.0,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",TZP,1.65,0,,ECDC_PDF
+EU/EEA,2020,"Pseudomonas
+aeruginosa",TZP,18.8,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",TZP,1.74,0,,ECDC_PDF
+EU/EEA,2021,"Pseudomonas
+aeruginosa",TZP,18.8,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",TZP,1.88,0,,ECDC_PDF
+EU/EEA,2022,"Pseudomonas
+aeruginosa",TZP,19.4,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",TZP,1.89,0,,ECDC_PDF
+EU/EEA,2023,"Pseudomonas
+aeruginosa",TZP,18.2,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",TZP,1.81,0,,ECDC_PDF
+EU/EEA,2024,"Pseudomonas
+aeruginosa",TZP,16.4,0,,ECDC_PDF
+Austria,2015,Salmonella spp.,AMP,13.5,1556,human,EFSA
+Belgium,2015,Salmonella spp.,AMP,42.1,0,meat_pork,EFSA
+Bulgaria,2015,Salmonella spp.,AMP,100.0,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,AMP,48.4,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,AMP,30.9,94,human,EFSA
+Cyprus,2015,Salmonella spp.,AMP,75.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,AMP,26.1,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,AMP,33.1,275,human,EFSA
+Denmark,2015,Salmonella spp.,AMP,35.9,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,AMP,22.2,72,human,EFSA
+Estonia,2015,Salmonella spp.,AMP,20.0,0,meat_pork,EFSA
+Finland,2015,Salmonella spp.,AMP,13.4,313,human,EFSA
+France,2015,Salmonella spp.,AMP,32.6,1052,human,EFSA
+France,2015,Salmonella spp.,AMP,40.9,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,AMP,28.7,1818,human,EFSA
+Germany,2015,Salmonella spp.,AMP,56.9,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,AMP,6.3,509,human,EFSA
+Hungary,2015,Salmonella spp.,AMP,37.4,813,human,EFSA
+Hungary,2015,Salmonella spp.,AMP,87.5,0,meat_pork,EFSA
+Iceland,2015,Salmonella spp.,AMP,18.8,16,human,EFSA
+Iceland,2015,Salmonella spp.,AMP,28.6,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,AMP,33.7,199,human,EFSA
+Ireland,2015,Salmonella spp.,AMP,56.1,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,AMP,54.9,71,human,EFSA
+Italy,2015,Salmonella spp.,AMP,44.0,0,meat_pork,EFSA
+Latvia,2015,Salmonella spp.,AMP,12.5,24,human,EFSA
+Lithuania,2015,Salmonella spp.,AMP,28.9,938,human,EFSA
+Luxembourg,2015,Salmonella spp.,AMP,35.8,106,human,EFSA
+Malta,2015,Salmonella spp.,AMP,68.3,126,human,EFSA
+Malta,2015,Salmonella spp.,AMP,18.8,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,AMP,27.4,787,human,EFSA
+Norway,2015,Salmonella spp.,AMP,15.7,350,human,EFSA
+Poland,2015,Salmonella spp.,AMP,60.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,AMP,51.4,140,human,EFSA
+Portugal,2015,Salmonella spp.,AMP,52.1,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,AMP,25.4,169,human,EFSA
+Romania,2015,Salmonella spp.,AMP,47.8,0,meat_pork,EFSA
+Slovakia,2015,Salmonella spp.,AMP,6.6,775,human,EFSA
+Slovakia,2015,Salmonella spp.,AMP,27.3,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,AMP,15.6,390,human,EFSA
+Spain,2015,Salmonella spp.,AMP,45.1,1999,human,EFSA
+Spain,2015,Salmonella spp.,AMP,54.7,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,AMP,21.3,615,human,EFSA
+United Kingdom,2015,Salmonella spp.,AMP,33.3,0,meat_pork,EFSA
+Belgium,2015,Salmonella spp.,AZITHROMYC,0.5,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,AZITHROMYC,25.0,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,AZITHROMYC,1.1,275,human,EFSA
+Denmark,2015,Salmonella spp.,AZITHROMYC,1.3,0,meat_pork,EFSA
+France,2015,Salmonella spp.,AZITHROMYC,0.7,1052,human,EFSA
+Germany,2015,Salmonella spp.,AZITHROMYC,5.9,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,AZITHROMYC,1.5,199,human,EFSA
+Netherlands,2015,Salmonella spp.,AZITHROMYC,0.3,787,human,EFSA
+Norway,2015,Salmonella spp.,AZITHROMYC,0.8,120,human,EFSA
+Portugal,2015,Salmonella spp.,AZITHROMYC,37.5,0,meat_pork,EFSA
+Spain,2015,Salmonella spp.,AZITHROMYC,1.6,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,C3G,0.4,1556,human,EFSA
+Belgium,2015,Salmonella spp.,C3G,1.1,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,C3G,2.7,37,human,EFSA
+Czech Republic,2015,Salmonella spp.,C3G,4.3,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,C3G,1.5,275,human,EFSA
+Finland,2015,Salmonella spp.,C3G,1.6,313,human,EFSA
+France,2015,Salmonella spp.,C3G,1.8,560,human,EFSA
+Germany,2015,Salmonella spp.,C3G,1.0,1818,human,EFSA
+Germany,2015,Salmonella spp.,C3G,3.9,0,meat_pork,EFSA
+Hungary,2015,Salmonella spp.,C3G,0.7,813,human,EFSA
+Italy,2015,Salmonella spp.,C3G,5.6,71,human,EFSA
+Italy,2015,Salmonella spp.,C3G,3.3,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,C3G,0.1,793,human,EFSA
+Luxembourg,2015,Salmonella spp.,C3G,0.9,106,human,EFSA
+Netherlands,2015,Salmonella spp.,C3G,1.1,787,human,EFSA
+Norway,2015,Salmonella spp.,C3G,1.1,350,human,EFSA
+Portugal,2015,Salmonella spp.,C3G,4.2,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,C3G,0.6,169,human,EFSA
+Slovakia,2015,Salmonella spp.,C3G,3.2,249,human,EFSA
+Slovenia,2015,Salmonella spp.,C3G,0.8,390,human,EFSA
+Spain,2015,Salmonella spp.,C3G,0.8,1999,human,EFSA
+Spain,2015,Salmonella spp.,C3G,0.8,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,C3G,2.4,581,human,EFSA
+Austria,2015,Salmonella spp.,CEFTAZIDIM,0.4,1556,human,EFSA
+Belgium,2015,Salmonella spp.,CEFTAZIDIM,1.1,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,CEFTAZIDIM,1.2,83,human,EFSA
+Czech Republic,2015,Salmonella spp.,CEFTAZIDIM,4.3,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,CEFTAZIDIM,1.1,275,human,EFSA
+France,2015,Salmonella spp.,CEFTAZIDIM,1.8,560,human,EFSA
+Germany,2015,Salmonella spp.,CEFTAZIDIM,0.9,1818,human,EFSA
+Germany,2015,Salmonella spp.,CEFTAZIDIM,3.9,0,meat_pork,EFSA
+Hungary,2015,Salmonella spp.,CEFTAZIDIM,3.2,802,human,EFSA
+Italy,2015,Salmonella spp.,CEFTAZIDIM,5.6,71,human,EFSA
+Italy,2015,Salmonella spp.,CEFTAZIDIM,2.2,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,CEFTAZIDIM,0.2,437,human,EFSA
+Luxembourg,2015,Salmonella spp.,CEFTAZIDIM,0.9,106,human,EFSA
+Netherlands,2015,Salmonella spp.,CEFTAZIDIM,0.5,787,human,EFSA
+Norway,2015,Salmonella spp.,CEFTAZIDIM,1.4,350,human,EFSA
+Portugal,2015,Salmonella spp.,CEFTAZIDIM,4.2,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,CEFTAZIDIM,0.6,169,human,EFSA
+Slovenia,2015,Salmonella spp.,CEFTAZIDIM,0.8,390,human,EFSA
+Spain,2015,Salmonella spp.,CEFTAZIDIM,0.6,1999,human,EFSA
+Austria,2015,Salmonella spp.,CHL,2.4,1556,human,EFSA
+Belgium,2015,Salmonella spp.,CHL,6.0,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,CHL,12.9,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,CHL,25.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,CHL,4.3,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,CHL,5.8,275,human,EFSA
+Denmark,2015,Salmonella spp.,CHL,5.1,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,CHL,2.7,73,human,EFSA
+Finland,2015,Salmonella spp.,CHL,2.9,313,human,EFSA
+France,2015,Salmonella spp.,CHL,11.2,1047,human,EFSA
+France,2015,Salmonella spp.,CHL,14.8,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,CHL,5.2,1816,human,EFSA
+Germany,2015,Salmonella spp.,CHL,17.6,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,CHL,1.6,510,human,EFSA
+Hungary,2015,Salmonella spp.,CHL,9.4,777,human,EFSA
+Hungary,2015,Salmonella spp.,CHL,25.0,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,CHL,7.0,199,human,EFSA
+Ireland,2015,Salmonella spp.,CHL,21.2,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,CHL,11.3,71,human,EFSA
+Italy,2015,Salmonella spp.,CHL,11.0,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,CHL,1.4,438,human,EFSA
+Luxembourg,2015,Salmonella spp.,CHL,3.8,106,human,EFSA
+Malta,2015,Salmonella spp.,CHL,6.3,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,CHL,5.1,787,human,EFSA
+Norway,2015,Salmonella spp.,CHL,7.5,120,human,EFSA
+Poland,2015,Salmonella spp.,CHL,20.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,CHL,8.6,140,human,EFSA
+Portugal,2015,Salmonella spp.,CHL,20.8,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,CHL,3.6,169,human,EFSA
+Romania,2015,Salmonella spp.,CHL,4.3,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,CHL,4.9,390,human,EFSA
+Spain,2015,Salmonella spp.,CHL,7.3,1996,human,EFSA
+Spain,2015,Salmonella spp.,CHL,19.5,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,CHL,6.3,568,human,EFSA
+United Kingdom,2015,Salmonella spp.,CHL,11.1,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,CIP,22.4,1556,human,EFSA
+Belgium,2015,Salmonella spp.,CIP,4.4,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,CIP,18.2,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,CIP,25.0,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,CIP,4.0,275,human,EFSA
+Estonia,2015,Salmonella spp.,CIP,8.2,73,human,EFSA
+Finland,2015,Salmonella spp.,CIP,9.3,313,human,EFSA
+France,2015,Salmonella spp.,CIP,21.8,1052,human,EFSA
+France,2015,Salmonella spp.,CIP,0.9,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,CIP,1.6,1817,human,EFSA
+Germany,2015,Salmonella spp.,CIP,2.0,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,CIP,0.4,509,human,EFSA
+Hungary,2015,Salmonella spp.,CIP,36.7,791,human,EFSA
+Hungary,2015,Salmonella spp.,CIP,12.5,0,meat_pork,EFSA
+Iceland,2015,Salmonella spp.,CIP,12.5,16,human,EFSA
+Ireland,2015,Salmonella spp.,CIP,15.6,199,human,EFSA
+Ireland,2015,Salmonella spp.,CIP,1.5,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,CIP,11.3,71,human,EFSA
+Italy,2015,Salmonella spp.,CIP,7.7,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,CIP,14.1,672,human,EFSA
+Luxembourg,2015,Salmonella spp.,CIP,17.9,106,human,EFSA
+Malta,2015,Salmonella spp.,CIP,61.1,126,human,EFSA
+Netherlands,2015,Salmonella spp.,CIP,13.2,787,human,EFSA
+Norway,2015,Salmonella spp.,CIP,4.0,350,human,EFSA
+Poland,2015,Salmonella spp.,CIP,40.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,CIP,10.0,140,human,EFSA
+Portugal,2015,Salmonella spp.,CIP,8.3,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,CIP,10.1,169,human,EFSA
+Romania,2015,Salmonella spp.,CIP,8.7,0,meat_pork,EFSA
+Slovakia,2015,Salmonella spp.,CIP,1.3,385,human,EFSA
+Slovenia,2015,Salmonella spp.,CIP,21.8,390,human,EFSA
+Spain,2015,Salmonella spp.,CIP,9.7,1998,human,EFSA
+Spain,2015,Salmonella spp.,CIP,7.0,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,CIP,1.8,563,human,EFSA
+United Kingdom,2015,Salmonella spp.,CIP,11.1,0,meat_pork,EFSA
+Belgium,2015,Salmonella spp.,COL,1.1,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,COL,2.9,275,human,EFSA
+Denmark,2015,Salmonella spp.,COL,1.3,0,meat_pork,EFSA
+France,2015,Salmonella spp.,COL,1.7,0,meat_pork,EFSA
+Malta,2015,Salmonella spp.,COL,6.3,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,COL,16.9,787,human,EFSA
+Portugal,2015,Salmonella spp.,COL,6.3,0,meat_pork,EFSA
+Spain,2015,Salmonella spp.,COL,0.8,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,GEN,1.1,1556,human,EFSA
+Belgium,2015,Salmonella spp.,GEN,0.5,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,GEN,3.2,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,GEN,16.7,54,human,EFSA
+Cyprus,2015,Salmonella spp.,GEN,50.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,GEN,9.1,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,GEN,0.7,275,human,EFSA
+Denmark,2015,Salmonella spp.,GEN,3.6,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,GEN,1.4,73,human,EFSA
+Finland,2015,Salmonella spp.,GEN,1.6,313,human,EFSA
+France,2015,Salmonella spp.,GEN,7.5,1051,human,EFSA
+France,2015,Salmonella spp.,GEN,1.7,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,GEN,1.4,1817,human,EFSA
+Germany,2015,Salmonella spp.,GEN,3.9,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,GEN,0.4,507,human,EFSA
+Hungary,2015,Salmonella spp.,GEN,0.9,777,human,EFSA
+Ireland,2015,Salmonella spp.,GEN,3.5,199,human,EFSA
+Ireland,2015,Salmonella spp.,GEN,22.7,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,GEN,2.2,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,GEN,0.6,359,human,EFSA
+Luxembourg,2015,Salmonella spp.,GEN,0.9,106,human,EFSA
+Netherlands,2015,Salmonella spp.,GEN,1.1,787,human,EFSA
+Norway,2015,Salmonella spp.,GEN,2.0,350,human,EFSA
+Portugal,2015,Salmonella spp.,GEN,0.7,140,human,EFSA
+Romania,2015,Salmonella spp.,GEN,1.2,169,human,EFSA
+Romania,2015,Salmonella spp.,GEN,4.3,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,GEN,1.0,390,human,EFSA
+Spain,2015,Salmonella spp.,GEN,3.8,1999,human,EFSA
+Spain,2015,Salmonella spp.,GEN,0.8,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,GEN,1.4,553,human,EFSA
+United Kingdom,2015,Salmonella spp.,GEN,11.1,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,NAL,22.1,1556,human,EFSA
+Belgium,2015,Salmonella spp.,NAL,3.8,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,NAL,3.9,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,NAL,4.0,275,human,EFSA
+Denmark,2015,Salmonella spp.,NAL,0.7,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,NAL,9.1,22,human,EFSA
+Finland,2015,Salmonella spp.,NAL,8.9,313,human,EFSA
+France,2015,Salmonella spp.,NAL,19.5,1051,human,EFSA
+France,2015,Salmonella spp.,NAL,0.9,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,NAL,10.2,1817,human,EFSA
+Greece,2015,Salmonella spp.,NAL,3.7,509,human,EFSA
+Hungary,2015,Salmonella spp.,NAL,12.5,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,NAL,13.6,199,human,EFSA
+Ireland,2015,Salmonella spp.,NAL,1.5,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,NAL,9.9,71,human,EFSA
+Italy,2015,Salmonella spp.,NAL,6.6,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,NAL,25.7,350,human,EFSA
+Netherlands,2015,Salmonella spp.,NAL,10.7,787,human,EFSA
+Norway,2015,Salmonella spp.,NAL,7.5,120,human,EFSA
+Poland,2015,Salmonella spp.,NAL,30.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,NAL,7.9,140,human,EFSA
+Portugal,2015,Salmonella spp.,NAL,4.2,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,NAL,11.2,169,human,EFSA
+Romania,2015,Salmonella spp.,NAL,4.3,0,meat_pork,EFSA
+Spain,2015,Salmonella spp.,NAL,19.5,1998,human,EFSA
+Spain,2015,Salmonella spp.,NAL,6.3,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,NAL,16.4,573,human,EFSA
+United Kingdom,2015,Salmonella spp.,NAL,11.1,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,SUL,15.7,1556,human,EFSA
+Belgium,2015,Salmonella spp.,SUL,40.4,0,meat_pork,EFSA
+Bulgaria,2015,Salmonella spp.,SUL,100.0,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,SUL,35.5,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,SUL,100.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,SUL,21.7,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,SUL,42.5,275,human,EFSA
+Denmark,2015,Salmonella spp.,SUL,38.5,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,SUL,20.5,73,human,EFSA
+Estonia,2015,Salmonella spp.,SUL,20.0,0,meat_pork,EFSA
+France,2015,Salmonella spp.,SUL,40.7,1052,human,EFSA
+France,2015,Salmonella spp.,SUL,53.9,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,SUL,56.9,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,SUL,16.1,504,human,EFSA
+Hungary,2015,Salmonella spp.,SUL,75.0,0,meat_pork,EFSA
+Iceland,2015,Salmonella spp.,SUL,28.6,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,SUL,33.2,199,human,EFSA
+Ireland,2015,Salmonella spp.,SUL,71.2,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,SUL,49.3,71,human,EFSA
+Italy,2015,Salmonella spp.,SUL,46.2,0,meat_pork,EFSA
+Latvia,2015,Salmonella spp.,SUL,100.0,0,meat_pork,EFSA
+Luxembourg,2015,Salmonella spp.,SUL,53.8,106,human,EFSA
+Malta,2015,Salmonella spp.,SUL,62.5,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,SUL,29.1,787,human,EFSA
+Poland,2015,Salmonella spp.,SUL,70.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,SUL,45.7,140,human,EFSA
+Portugal,2015,Salmonella spp.,SUL,70.8,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,SUL,20.1,169,human,EFSA
+Romania,2015,Salmonella spp.,SUL,30.4,0,meat_pork,EFSA
+Slovakia,2015,Salmonella spp.,SUL,27.3,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,SUL,26.7,389,human,EFSA
+Spain,2015,Salmonella spp.,SUL,47.6,1997,human,EFSA
+Spain,2015,Salmonella spp.,SUL,57.8,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,SUL,22.7,550,human,EFSA
+United Kingdom,2015,Salmonella spp.,SUL,44.4,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,TET,16.0,1556,human,EFSA
+Belgium,2015,Salmonella spp.,TET,33.9,0,meat_pork,EFSA
+Bulgaria,2015,Salmonella spp.,TET,100.0,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,TET,41.9,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,TET,18.9,37,human,EFSA
+Cyprus,2015,Salmonella spp.,TET,100.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,TET,13.0,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,TET,30.9,275,human,EFSA
+Denmark,2015,Salmonella spp.,TET,30.8,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,TET,20.5,73,human,EFSA
+Estonia,2015,Salmonella spp.,TET,20.0,0,meat_pork,EFSA
+Finland,2015,Salmonella spp.,TET,13.7,313,human,EFSA
+France,2015,Salmonella spp.,TET,41.8,1052,human,EFSA
+France,2015,Salmonella spp.,TET,54.8,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,TET,26.3,1817,human,EFSA
+Germany,2015,Salmonella spp.,TET,62.7,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,TET,9.6,510,human,EFSA
+Hungary,2015,Salmonella spp.,TET,58.0,69,human,EFSA
+Hungary,2015,Salmonella spp.,TET,75.0,0,meat_pork,EFSA
+Iceland,2015,Salmonella spp.,TET,28.6,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,TET,34.2,199,human,EFSA
+Ireland,2015,Salmonella spp.,TET,62.1,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,TET,50.7,71,human,EFSA
+Italy,2015,Salmonella spp.,TET,51.6,0,meat_pork,EFSA
+Latvia,2015,Salmonella spp.,TET,100.0,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,TET,17.1,351,human,EFSA
+Luxembourg,2015,Salmonella spp.,TET,47.6,105,human,EFSA
+Malta,2015,Salmonella spp.,TET,25.0,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,TET,29.9,787,human,EFSA
+Norway,2015,Salmonella spp.,TET,38.3,120,human,EFSA
+Poland,2015,Salmonella spp.,TET,60.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,TET,50.7,140,human,EFSA
+Portugal,2015,Salmonella spp.,TET,83.3,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,TET,14.8,169,human,EFSA
+Romania,2015,Salmonella spp.,TET,34.8,0,meat_pork,EFSA
+Slovakia,2015,Salmonella spp.,TET,7.3,423,human,EFSA
+Slovakia,2015,Salmonella spp.,TET,18.2,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,TET,16.2,390,human,EFSA
+Spain,2015,Salmonella spp.,TET,43.9,1998,human,EFSA
+Spain,2015,Salmonella spp.,TET,73.4,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,TET,24.0,551,human,EFSA
+United Kingdom,2015,Salmonella spp.,TET,33.3,0,meat_pork,EFSA
+Belgium,2015,Salmonella spp.,TIGECYCLIN,1.6,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,TIGECYCLIN,1.0,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,TIGECYCLIN,4.7,0,human,EFSA
+France,2015,Salmonella spp.,TIGECYCLIN,1.4,0,human,EFSA
+France,2015,Salmonella spp.,TIGECYCLIN,4.7,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,TIGECYCLIN,3.9,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,TIGECYCLIN,7.6,0,meat_pork,EFSA
+Netherlands,2015,Salmonella spp.,TIGECYCLIN,2.2,0,human,EFSA
+Portugal,2015,Salmonella spp.,TIGECYCLIN,20.8,0,meat_pork,EFSA
+Spain,2015,Salmonella spp.,TIGECYCLIN,3.9,0,meat_pork,EFSA
+Austria,2015,Salmonella spp.,TMP,2.0,203,human,EFSA
+Belgium,2015,Salmonella spp.,TMP,16.9,0,meat_pork,EFSA
+Croatia,2015,Salmonella spp.,TMP,16.1,0,meat_pork,EFSA
+Cyprus,2015,Salmonella spp.,TMP,75.0,0,meat_pork,EFSA
+Czech Republic,2015,Salmonella spp.,TMP,4.3,0,meat_pork,EFSA
+Denmark,2015,Salmonella spp.,TMP,10.9,64,human,EFSA
+Denmark,2015,Salmonella spp.,TMP,10.3,0,meat_pork,EFSA
+Estonia,2015,Salmonella spp.,TMP,8.3,12,human,EFSA
+Estonia,2015,Salmonella spp.,TMP,10.0,0,meat_pork,EFSA
+Finland,2015,Salmonella spp.,TMP,2.5,80,human,EFSA
+France,2015,Salmonella spp.,TMP,40.4,141,human,EFSA
+France,2015,Salmonella spp.,TMP,7.8,0,meat_pork,EFSA
+Germany,2015,Salmonella spp.,TMP,17.6,0,meat_pork,EFSA
+Greece,2015,Salmonella spp.,TMP,7.9,63,human,EFSA
+Hungary,2015,Salmonella spp.,TMP,3.5,256,human,EFSA
+Iceland,2015,Salmonella spp.,TMP,28.6,0,meat_pork,EFSA
+Ireland,2015,Salmonella spp.,TMP,8.7,46,human,EFSA
+Ireland,2015,Salmonella spp.,TMP,24.2,0,meat_pork,EFSA
+Italy,2015,Salmonella spp.,TMP,9.1,11,human,EFSA
+Italy,2015,Salmonella spp.,TMP,5.5,0,meat_pork,EFSA
+Lithuania,2015,Salmonella spp.,TMP,8.9,45,human,EFSA
+Luxembourg,2015,Salmonella spp.,TMP,3.1,32,human,EFSA
+Netherlands,2015,Salmonella spp.,TMP,14.1,184,human,EFSA
+Poland,2015,Salmonella spp.,TMP,10.0,0,meat_pork,EFSA
+Portugal,2015,Salmonella spp.,TMP,4.3,23,human,EFSA
+Portugal,2015,Salmonella spp.,TMP,50.0,0,meat_pork,EFSA
+Romania,2015,Salmonella spp.,TMP,7.0,43,human,EFSA
+Romania,2015,Salmonella spp.,TMP,21.7,0,meat_pork,EFSA
+Slovakia,2015,Salmonella spp.,TMP,9.1,0,meat_pork,EFSA
+Slovenia,2015,Salmonella spp.,TMP,6.3,48,human,EFSA
+Spain,2015,Salmonella spp.,TMP,10.6,226,human,EFSA
+Spain,2015,Salmonella spp.,TMP,21.1,0,meat_pork,EFSA
+United Kingdom,2015,Salmonella spp.,TMP,9.3,129,human,EFSA
+United Kingdom,2015,Salmonella spp.,TMP,11.1,0,meat_pork,EFSA
+EU/EEA,2020,"Streptococcus
+pneumoniae",COMBINED,0.24,0,,ECDC_PDF
+EU/EEA,2021,"Streptococcus
+pneumoniae",COMBINED,0.28,0,,ECDC_PDF
+EU/EEA,2022,"Streptococcus
+pneumoniae",COMBINED,0.34,0,,ECDC_PDF
+EU/EEA,2023,"Streptococcus
+pneumoniae",COMBINED,0.43,0,,ECDC_PDF
+EU/EEA,2024,"Streptococcus
+pneumoniae",COMBINED,0.55,0,,ECDC_PDF
+EU/EEA,2020,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.55,0,,ECDC_PDF
+EU/EEA,2020,"Streptococcus
+pneumoniae",ENTEROCOCCUS,1.76,0,,ECDC_PDF
+EU/EEA,2021,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.94,0,,ECDC_PDF
+EU/EEA,2021,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.15,0,,ECDC_PDF
+EU/EEA,2022,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.45,0,,ECDC_PDF
+EU/EEA,2022,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.06,0,,ECDC_PDF
+EU/EEA,2023,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.31,0,,ECDC_PDF
+EU/EEA,2023,"Streptococcus
+pneumoniae",ENTEROCOCCUS,1.93,0,,ECDC_PDF
+EU/EEA,2024,"Streptococcus
+pneumoniae",ENTEROCOCCUS,2.2,0,,ECDC_PDF
+EU/EEA,2024,"Streptococcus
+pneumoniae",ENTEROCOCCUS,1.96,0,,ECDC_PDF
+EU/EEA,2020,"Streptococcus
+pneumoniae",MACROLIDE,0.51,0,,ECDC_PDF
+EU/EEA,2021,"Streptococcus
+pneumoniae",MACROLIDE,0.53,0,,ECDC_PDF
+EU/EEA,2022,"Streptococcus
+pneumoniae",MACROLIDE,0.73,0,,ECDC_PDF
+EU/EEA,2023,"Streptococcus
+pneumoniae",MACROLIDE,0.95,0,,ECDC_PDF
+EU/EEA,2024,"Streptococcus
+pneumoniae",MACROLIDE,1.12,0,,ECDC_PDF
+EU/EEA,2020,"Streptococcus
+pneumoniae",PENICILLIN,0.47,0,,ECDC_PDF
+EU/EEA,2021,"Streptococcus
+pneumoniae",PENICILLIN,0.51,0,,ECDC_PDF
+EU/EEA,2022,"Streptococcus
+pneumoniae",PENICILLIN,0.63,0,,ECDC_PDF
+EU/EEA,2023,"Streptococcus
+pneumoniae",PENICILLIN,0.76,0,,ECDC_PDF
+EU/EEA,2024,"Streptococcus
+pneumoniae",PENICILLIN,0.99,0,,ECDC_PDF

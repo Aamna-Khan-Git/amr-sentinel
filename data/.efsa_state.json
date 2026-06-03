@@ -1,0 +1,12 @@
+{
+  "last_fetch": "2026-06-02T17:28:37.805427",
+  "efsa_rows": 663,
+  "total_rows": 873,
+  "organisms": 6,
+  "countries": 32,
+  "source_types": {
+    "animal_pig": 308,
+    "human": 193,
+    "meat_pork": 162
+  }
+}

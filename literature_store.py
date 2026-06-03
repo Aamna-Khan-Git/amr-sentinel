@@ -1,3 +1,10 @@
+"""
+literature_store.py
+-------------------
+Ingests PubMed abstracts into ChromaDB and provides semantic search.
+ChromaDB path is read from config (CHROMA_PATH env var).
+"""
+
 import json
 import csv
 import logging
@@ -6,18 +13,34 @@ from typing import Optional
 
 import chromadb
 from chromadb.utils import embedding_functions
+from config import CHROMA_PATH
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(levelname)s  %(message)s")
 
-CHROMA_DIR = "chroma_store"
+CHROMA_DIR      = CHROMA_PATH
 COLLECTION_NAME = "pubmed_amr"
-EMBED_MODEL = "all-MiniLM-L6-v2"
+EMBED_MODEL     = "all-MiniLM-L6-v2"
 
+# Add at the top of literature_store.py after imports
+_COLLECTION_CACHE = {}
+
+def _get_collection(chroma_dir: str = CHROMA_DIR) -> chromadb.Collection:
+    if chroma_dir in _COLLECTION_CACHE:
+        return _COLLECTION_CACHE[chroma_dir]
+    client = chromadb.PersistentClient(path=chroma_dir)
+    ef     = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
+    col    = client.get_or_create_collection(
+        name=COLLECTION_NAME,
+        embedding_function=ef,
+        metadata={"hnsw:space": "cosine"},
+    )
+    _COLLECTION_CACHE[chroma_dir] = col
+    return col
 
 def _get_collection(chroma_dir: str = CHROMA_DIR) -> chromadb.Collection:
     client = chromadb.PersistentClient(path=chroma_dir)
-    ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
+    ef     = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
     return client.get_or_create_collection(
         name=COLLECTION_NAME,
         embedding_function=ef,
@@ -63,7 +86,11 @@ def _record_to_document(rec: dict) -> tuple[str, str, dict]:
     return pmid, document_text, metadata
 
 
-def ingest_literature(path: str, chroma_dir: str = CHROMA_DIR, batch_size: int = 64) -> int:
+def ingest_literature(
+    path: str,
+    chroma_dir: str = CHROMA_DIR,
+    batch_size: int = 64,
+) -> int:
     if not Path(path).exists():
         raise FileNotFoundError(f"Literature file not found: {path}")
     ext = Path(path).suffix.lower()
@@ -104,6 +131,39 @@ def ingest_literature(path: str, chroma_dir: str = CHROMA_DIR, batch_size: int =
     return indexed
 
 
+def ingest_records(records: list[dict], chroma_dir: str = CHROMA_DIR, batch_size: int = 64) -> int:
+    """
+    Ingest a list of record dicts directly (used by pdf_ingest.py).
+    Each record must have: pmid, title, abstract, year.
+    """
+    collection = _get_collection(chroma_dir)
+    ids, documents, metadatas = [], [], []
+    skipped = indexed = 0
+
+    for rec in records:
+        try:
+            doc_id, doc_text, meta = _record_to_document(rec)
+        except ValueError as exc:
+            logger.warning("Skipping record: %s", exc)
+            skipped += 1
+            continue
+        ids.append(doc_id)
+        documents.append(doc_text)
+        metadatas.append(meta)
+        if len(ids) >= batch_size:
+            collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+            indexed += len(ids)
+            ids, documents, metadatas = [], [], []
+
+    if ids:
+        collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+        indexed += len(ids)
+
+    logger.info("ingest_records: indexed=%d skipped=%d total=%d",
+                indexed, skipped, collection.count())
+    return indexed
+
+
 def search_literature(
     query: str,
     k: int = 5,
@@ -111,8 +171,8 @@ def search_literature(
     year_filter: Optional[int] = None,
 ) -> list[dict]:
     collection = _get_collection(chroma_dir)
-    where = {"year": {"$gte": str(year_filter)}} if year_filter is not None else None
-    results = collection.query(
+    where      = {"year": {"$gte": str(year_filter)}} if year_filter is not None else None
+    results    = collection.query(
         query_texts=[query],
         n_results=min(k, collection.count() or 1),
         where=where,

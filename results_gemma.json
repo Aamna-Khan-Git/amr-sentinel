@@ -1,0 +1,1191 @@
+{
+  "total_questions": 10,
+  "intent_accuracy": 0.9,
+  "entity_accuracy": 0.765,
+  "hallucination_clean_rate": 1.0,
+  "severity_accuracy": 0.982,
+  "llm_quality_score": 0.667,
+  "overall_score": 0.863,
+  "details": [
+    {
+      "question": "How has ciprofloxacin resistance in E. coli changed over time?",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "trend",
+        "actual_organism": "E. coli",
+        "actual_antibiotic": "CIP",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "21172788",
+          "7556239",
+          "8467626"
+        ],
+        "actual_pmids": [
+          "21172788",
+          "8467626",
+          "18778293",
+          "ECDC_2024_0032",
+          "7556239"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": false,
+        "checks": [
+          {
+            "pct": 11.0,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 14.3,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 13.0,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 13.3,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 14.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 14.6,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE"
+            ]
+          }
+        ],
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1.0
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 2,
+            "comment": "The answer correctly states the 2015 resistance percentage and number of countries, but incorrectly states 14.57% for 2024 when the provided data only goes up to 2023, with 14.06%"
+          },
+          "completeness": {
+            "score": 2,
+            "comment": "The answer addresses the change over time, but the conclusion is weakened by the limited dataset and it doesn\u2019t acknowledge the lack of total isolates tested."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The answer provides a generally clear summary and uses appropriate language like 'moderate level', but should further acknowledge the limitations imposed by the small sample size (one country)."
+          }
+        },
+        "total": 6,
+        "pct": 0.667
+      },
+      "data_row_count": 6,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Show me the trend of tetracycline resistance in Salmonella Typhimurium",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": false,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "trend",
+        "actual_organism": "Salmonella Typhimurium",
+        "actual_antibiotic": "TET",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "35740132",
+          "41887169",
+          "36688703"
+        ],
+        "actual_pmids": [
+          "36688703",
+          "41887169",
+          "12582444",
+          "35740132",
+          "39057083"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": true,
+        "reason": "no data rows returned"
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The response accurately states no data was returned and bases its answer solely on this fact."
+          },
+          "completeness": {
+            "score": 3,
+            "comment": "The response directly addresses the question, stating a trend cannot be shown due to lack of data, and provides context."
+          },
+          "clinical_clarity": {
+            "score": 3,
+            "comment": "The response is clearly written and appropriately acknowledges the importance of tetracycline resistance in Salmonella despite lack of specific trend data."
+          }
+        },
+        "total": 9,
+        "pct": 1.0
+      },
+      "data_row_count": 0,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "How has ampicillin resistance in E. coli changed in Germany over the years?",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "trend",
+        "actual_organism": "E. coli",
+        "actual_antibiotic": "AMP",
+        "actual_country": "Germany"
+      },
+      "citation": {
+        "cited_pmids": [
+          "31171967",
+          "14514147",
+          "42043551",
+          "11144690"
+        ],
+        "actual_pmids": [
+          "42043551",
+          "34419741",
+          "31171967",
+          "11144690",
+          "14514147"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": false,
+        "checks": [
+          {
+            "pct": 33.0,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          }
+        ],
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The answer accurately reports the ampicillin resistance percentage and isolate count directly from the provided data."
+          },
+          "completeness": {
+            "score": 1,
+            "comment": "The question asks about changes *over the years*, but the data only contains information for a single year, and the response acknowledges this lack of trend data."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The 'MODERATE' labeling is somewhat helpful, but could be improved with a reference to typical clinical breakpoints or a clearer explanation of what 'moderate' implies in terms of treatment options."
+          }
+        },
+        "total": 6,
+        "pct": 0.667
+      },
+      "data_row_count": 1,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Trend of ESBL resistance in E. coli over the years",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": false,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "trend",
+        "actual_organism": "E. coli",
+        "actual_antibiotic": "ESBL_PHENO",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "24118431",
+          "38606968",
+          "40033002",
+          "38608515"
+        ],
+        "actual_pmids": [
+          "38608515",
+          "41673084",
+          "38606968",
+          "24118431",
+          "40033002"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": true,
+        "reason": "no data rows returned"
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The response accurately states that no data was returned and bases its entire answer on this fact."
+          },
+          "completeness": {
+            "score": 1,
+            "comment": "The response acknowledges the question but cannot answer it due to lack of data, providing only contextual information."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The response provides context regarding ESBL resistance, which is clinically relevant, but it's mostly background information given the lack of data."
+          }
+        },
+        "total": 6,
+        "pct": 0.667
+      },
+      "data_row_count": 0,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Compare ciprofloxacin resistance in E. coli across European countries",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "compare",
+        "actual_organism": "E. coli",
+        "actual_antibiotic": "CIP",
+        "actual_country": "European countries"
+      },
+      "citation": {
+        "cited_pmids": [
+          "21172788",
+          "34438995",
+          "7556239"
+        ],
+        "actual_pmids": [
+          "21172788",
+          "34438995",
+          "18778293",
+          "ECDC_2024_0032",
+          "7556239"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": false,
+        "checks": [
+          {
+            "pct": 49.4,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 47.6,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 43.6,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 29.6,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 20.7,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 15.9,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 14.9,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 13.8,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 12.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 10.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 8.2,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 7.1,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 7.1,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 7.1,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 5.9,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 5.3,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 4.9,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 4.5,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 4.2,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 3.3,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.7,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.5,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.4,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.4,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.2,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 2.1,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 1.1,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 0.7,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 0.7,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 0.5,
+            "expected_label": "LOW",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          }
+        ],
+        "correct": 30,
+        "total": 30,
+        "accuracy": 1.0
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The answer only references data presented in the provided rows."
+          },
+          "completeness": {
+            "score": 2,
+            "comment": "The answer begins to compare resistance across countries, but the dataset is limited to only 5 countries and doesn't provide a comprehensive European overview."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The answer includes clinically relevant context about concerns regarding resistance and links to antibiotic use, but the high/low labels are somewhat arbitrary without defined thresholds."
+          }
+        },
+        "total": 7,
+        "pct": 0.778
+      },
+      "data_row_count": 30,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Which countries have the highest tetracycline resistance in Salmonella?",
+      "intent_entity": {
+        "intent_correct": false,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "list_values",
+        "actual_organism": "Salmonella spp.",
+        "actual_antibiotic": "TET",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "36678437",
+          "35740132",
+          "41887169"
+        ],
+        "actual_pmids": [
+          "36678437",
+          "41887169",
+          "12582444",
+          "35740132",
+          "39057083"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": true,
+        "reason": "no data rows returned"
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 0,
+            "comment": "The response explicitly states the provided data contains an error and is unusable, and relies on external PubMed abstracts instead."
+          },
+          "completeness": {
+            "score": 0,
+            "comment": "The question asks for a list of countries, but the response does not provide any country-specific information."
+          },
+          "clinical_clarity": {
+            "score": 1,
+            "comment": "The response acknowledges tetracycline resistance in Salmonella is a concern, which is clinically relevant, but lacks specific details requested."
+          }
+        },
+        "total": 1,
+        "pct": 0.111
+      },
+      "data_row_count": 0,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Compare vancomycin resistance in Enterococcus faecium across countries",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": false,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "compare",
+        "actual_organism": "Enterococcus faecium",
+        "actual_antibiotic": "VAN",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "41650167",
+          "32498615",
+          "33855441",
+          "31485325"
+        ],
+        "actual_pmids": [
+          "41650167",
+          "33855441",
+          "33189998",
+          "32498615",
+          "31485325"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": true,
+        "reason": "no data rows returned"
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The response accurately states no data was returned and bases its summary on external literature when data is absent."
+          },
+          "completeness": {
+            "score": 1,
+            "comment": "The question asks for a country-by-country comparison, and the system states it *cannot* provide this due to lack of data. While honest, it doesn't fulfill the request."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The response is clinically appropriate in identifying VRE as a concern and mentioning limited treatment options, but the lack of data significantly limits its clinical value."
+          }
+        },
+        "total": 6,
+        "pct": 0.667
+      },
+      "data_row_count": 0,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Which organism and antibiotic combinations have the highest resistance?",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "top_resistant",
+        "actual_organism": "Enterococcus faecalis",
+        "actual_antibiotic": "vancomycin",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "41650167",
+          "33189998",
+          "32498615",
+          "31485325"
+        ],
+        "actual_pmids": [
+          "41650167",
+          "33855441",
+          "33189998",
+          "32498615",
+          "31485325"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": false,
+        "checks": [
+          {
+            "pct": 53.8,
+            "expected_label": "CRITICAL",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 46.1,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 44.5,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 40.8,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 38.4,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 37.2,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 33.9,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 20.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 18.3,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          },
+          {
+            "pct": 15.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "CRITICAL",
+              "HIGH",
+              "MODERATE"
+            ]
+          }
+        ],
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The answer correctly identifies the highest resistance combinations (E. coli/TET and Salmonella spp./SUL) directly from the provided data."
+          },
+          "completeness": {
+            "score": 2,
+            "comment": "It answers the question but acknowledges missing data (vancomycin resistance) not in the provided rows, which is helpful but slightly beyond the scope of *just* evaluating the provided data."
+          },
+          "clinical_clarity": {
+            "score": 3,
+            "comment": "The use of 'CRITICAL' and 'HIGH' to categorize resistance levels adds clinical clarity and is appropriate given the percentage ranges."
+          }
+        },
+        "total": 8,
+        "pct": 0.889
+      },
+      "data_row_count": 10,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Show me the top 10 highest resistance combinations",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": true,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "top_resistant",
+        "actual_organism": "Salmonella spp.",
+        "actual_antibiotic": "COL",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "33243630",
+          "37744490",
+          "32003708",
+          "35203874"
+        ],
+        "actual_pmids": [
+          "33243630",
+          "35203874",
+          "37744490",
+          "32003708",
+          "34480840"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": false,
+        "checks": [
+          {
+            "pct": 53.8,
+            "expected_label": "CRITICAL",
+            "label_found": false,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 46.1,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 44.5,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 40.8,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 38.4,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 37.2,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 33.9,
+            "expected_label": "HIGH",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 20.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 18.3,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          },
+          {
+            "pct": 15.1,
+            "expected_label": "MODERATE",
+            "label_found": true,
+            "labels_in_answer": [
+              "HIGH",
+              "MODERATE",
+              "LOW"
+            ]
+          }
+        ],
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 1,
+            "comment": "The answer mentions resistance levels that are present in the data, but also brings up colistin resistance which is *not* in the provided data."
+          },
+          "completeness": {
+            "score": 0,
+            "comment": "The question asked for the top 10 highest resistance *combinations*, but the system only discusses individual antibiotic resistance in Salmonella."
+          },
+          "clinical_clarity": {
+            "score": 2,
+            "comment": "The clinical framing is appropriate, noting 'concerning levels of resistance' and mentioning the emerging threat of mcr genes, but this is overshadowed by not answering the question."
+          }
+        },
+        "total": 3,
+        "pct": 0.333
+      },
+      "data_row_count": 10,
+      "lit_hit_count": 5
+    },
+    {
+      "question": "Is fluoroquinolone resistance in Campylobacter increasing?",
+      "intent_entity": {
+        "intent_correct": true,
+        "organism_correct": false,
+        "antibiotic_correct": true,
+        "country_correct": true,
+        "actual_intent": "trend",
+        "actual_organism": "Campylobacter",
+        "actual_antibiotic": "CIP",
+        "actual_country": null
+      },
+      "citation": {
+        "cited_pmids": [
+          "16409659",
+          "12604004",
+          "1482158",
+          "17210776"
+        ],
+        "actual_pmids": [
+          "12604004",
+          "1482158",
+          "1759828",
+          "16409659",
+          "17210776"
+        ],
+        "hallucinated_pmids": [],
+        "hallucination_count": 0,
+        "clean": true,
+        "has_citations": true
+      },
+      "severity": {
+        "skipped": true,
+        "reason": "no data rows returned"
+      },
+      "answer_quality": {
+        "skipped": false,
+        "scores": {
+          "factual_grounding": {
+            "score": 3,
+            "comment": "The system correctly states no data was returned and bases its summary on the absence of data in the provided rows."
+          },
+          "completeness": {
+            "score": 2,
+            "comment": "The system acknowledges it can't answer the question based on the provided data but partially addresses it by referencing historical trends and literature."
+          },
+          "clinical_clarity": {
+            "score": 3,
+            "comment": "The answer is clear, appropriately frames the issue of fluoroquinolone resistance in *Campylobacter*, and is clinically relevant."
+          }
+        },
+        "total": 8,
+        "pct": 0.889
+      },
+      "data_row_count": 0,
+      "lit_hit_count": 5
+    }
+  ]
+}
