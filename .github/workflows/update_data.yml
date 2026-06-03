@@ -1,0 +1,64 @@
+name: Update AMR surveillance data
+
+on:
+  schedule:
+    - cron: '0 6 1 11 *'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Report year to ingest'
+        required: false
+        default: ''
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt pdfplumber
+
+      - name: Run ECDC PDF ingestion
+        env:
+          DATABASE_PATH: amr_sentinel.db
+          CHROMA_PATH: chroma_store
+        run: |
+          if [ "${{ github.event.inputs.year }}" != "" ]; then
+            python3 pdf_ingest.py --year ${{ github.event.inputs.year }}
+          else
+            python3 pdf_ingest.py
+          fi
+
+      - name: Run EFSA data fetch
+        env:
+          DATABASE_PATH: amr_sentinel.db
+          CHROMA_PATH: chroma_store
+        run: python3 fetch_efsa.py
+
+      - name: Refresh PubMed abstracts
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          DATABASE_PATH: amr_sentinel.db
+          CHROMA_PATH: chroma_store
+        run: |
+          python3 fetch_abstracts_ncbi.py
+          python3 literature_store.py data/abstracts.jsonl
+
+      - name: Commit updated data
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add amr_sentinel.db data/amr_tidy.csv chroma_store/ || true
+          git diff --staged --quiet || git commit -m "Auto-update AMR data $(date +%Y-%m-%d)"
+          git push
