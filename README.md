@@ -51,7 +51,7 @@ Streamlit UI / FastAPI response
 | Source | Coverage | Type |
 |---|---|---|
 | ECDC EARS-Net (PDF) | 2020–2024, 8 organisms, 30+ countries | Human bloodstream infections |
-| EFSA Zoonotic (Excel) | 2015, E. coli + Salmonella, 31 countries | Animal (pigs) + food chain (pork meat) |
+| EFSA Zoonotic (Excel) | 2022-2023, E. coli + Salmonella, 31 countries | Animal (pigs) + food chain (pork meat) |
 | PubMed via NCBI | ~200 abstracts | Scientific literature |
 
 ## Quick Start
@@ -125,8 +125,8 @@ uvicorn api_server:app --host 0.0.0.0 --port 8000
 | Entity Accuracy | 100% |
 | No-Hallucination Rate | 100% |
 | Severity Label Accuracy | 100% |
-| Answer Quality (LLM judge) | 76.7% |
-| **Overall** | **95.3%** |
+| Answer Quality (LLM judge) | 77.8% |
+| **Overall** | **95.6%** |
 
 ## Tech Stack
 
