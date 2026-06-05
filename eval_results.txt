@@ -1,0 +1,51 @@
+  Running 10 evaluation questions …  (this may take a minute)
+
+  [01/10] How has ciprofloxacin resistance in E. coli changed over time?
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✓
+  [02/10] Show me the trend of tetracycline resistance in Salmonella Typhim…
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✗
+  [03/10] How has ampicillin resistance in E. coli changed in Germany over …
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✗
+  [04/10] Trend of ESBL resistance in E. coli over the years
+           Intent ✓  │  No-hallucination ✓  │  Severity –  │  Quality ✓
+  [05/10] Compare ciprofloxacin resistance in E. coli across European count…
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✓
+  [06/10] Which countries have the highest tetracycline resistance in Salmo…
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✓
+  [07/10] Compare vancomycin resistance in Enterococcus faecium across coun…
+           Intent ✓  │  No-hallucination ✓  │  Severity –  │  Quality ✓
+  [08/10] Which organism and antibiotic combinations have the highest resis…
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✓
+  [09/10] Show me the top 10 highest resistance combinations
+           Intent ✓  │  No-hallucination ✓  │  Severity ✓  │  Quality ✓
+  [10/10] Is fluoroquinolone resistance in Campylobacter increasing?
+           Intent ✓  │  No-hallucination ✓  │  Severity –  │  Quality ✓
+
+══════════════════════════════════════════════════════════════
+  AMR SENTINEL — EVALUATION REPORT  (10 questions)
+══════════════════════════════════════════════════════════════
+
+  Metric                                 Score   Bar
+  ───────────────────────────────────   ────────   ──────────────────────────────
+  1. Intent Accuracy                     10/10   [██████████████████████████████]  100.0%
+  2. Entity Accuracy (org/drug/country)    17/17   [██████████████████████████████]  100.0%
+  3. No-Hallucination Rate               10/10   [██████████████████████████████]  100.0%
+  4. Severity Label Accuracy             53/53   [██████████████████████████████]  100.0%
+  5. Answer Quality (LLM judge)*         70/90   [███████████████████████░░░░░░░]   77.8%
+
+  ────────────────────────────────────────────────────────────
+  Overall Score                                  [█████████████████████████████░]   95.6%
+══════════════════════════════════════════════════════════════
+  * LLM judge runs on all questions (Claude Haiku)
+
+  FAILURES (2 question(s) had at least one issue)
+
+  [02] Show me the trend of tetracycline resistance in Salmonella Typhim
+       ✗  Quality/completeness: 1/3 — The question asks for a *trend* but the provided data only covers one year (2023), making a trend analysis impossible. The response doesn't acknowledge this limitation.
+
+  [03] How has ampicillin resistance in E. coli changed in Germany over
+       ✗  Quality/factual_grounding: 0/3 — The data provided contains no information about Germany; the answer fabricates data for Germany.
+       ✗  Quality/completeness: 0/3 — The question asks about changes *over time*, and the provided data only covers a single year, but the answer attempts to discuss a trend anyway.
+       ✗  Quality/clinical_clarity: 1/3 — The answer presents the information in a clinically relevant way (percentages, isolate numbers) *if* the data were accurate, but the fabricated data undermines this.
+
+══════════════════════════════════════════════════════════════
