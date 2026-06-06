@@ -417,7 +417,7 @@ def print_report(
     print(f"\n  {'─'*(W-2)}")
     print(f"  {'Overall Score':<35} {'':>8}   {_bar(overall)}  {_pct(overall)}")
     print(f"{'═'*W}")
-    print(f"  * LLM judge runs on all questions (Claude Haiku)\n")
+    print(f"  * LLM judge runs on all questions (gemma3:27b via Ollama)\n")
 
     if failures:
         print(f"  FAILURES ({len(failures)} question(s) had at least one issue)\n")

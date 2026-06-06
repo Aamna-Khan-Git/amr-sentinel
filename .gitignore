@@ -10,3 +10,5 @@ data/backups/
 !.env.example
 data/abstracts.jsonl
 amr_outputs/
+data/efsa_*.xlsm
+data/efsa_*.xlsx
