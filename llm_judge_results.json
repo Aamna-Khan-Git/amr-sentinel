@@ -1,0 +1,338 @@
+[
+  {
+    "question_id": 1,
+    "question": "How has ciprofloxacin resistance in E. coli changed over time?",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 8,
+        "hallucination_count": 3,
+        "hallucination_rate": 0.1,
+        "hallucination_examples": [
+          "The answer states that the 2011 Spanish study “showed rising ciprofloxacin resistance” – the provided snippet does not contain any quantitative statement of a rise.",
+          "The claim that the 2024 EU/EEA figure “sits near the EU mean” is not supported by the ECDC 2024 report snippet, which gives no numerical comparison.",
+          "The statement that the 2023 spike “exceeds many national averages” is not backed by any data in the supplied evidence."
+        ],
+        "reasoning": "The answer correctly reports the numeric trend from the supplied surveillance rows (2020‑2024) and accurately reflects the older literature that is supported. However, a few interpretive statements about the Spanish 2011 study and EU‑wide averages are not directly evidenced, resulting in minor hallucinations. Overall the answer is comprehensive and clearly explains the trend."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 3,
+        "completeness": 1,
+        "clinical_clarity": 2,
+        "total_score": 6,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The answer accurately reports the only quantitative longitudinal data that is present in the literature (0.47% → 6.7% between 1989‑1991). It does not introduce unsupported claims. However, it completely ignores the structured surveillance data (2020‑2024) that directly answer the question, resulting in a very incomplete response. The presentation is clear but limited."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG provides a full, data‑driven description of how ciprofloxacin resistance in E. coli changed over the recent years, matching the retrieved evidence, whereas the single‑agent answer omits this crucial information and only cites an old study, making it less complete despite being factually accurate."
+    }
+  },
+  {
+    "question_id": 2,
+    "question": "Show me the trend of tetracycline resistance in Salmonella Typhimurium",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 1,
+        "completeness": 2,
+        "clinical_clarity": 2,
+        "total_score": 5,
+        "hallucination_count": 3,
+        "hallucination_rate": 0.075,
+        "hallucination_examples": [
+          "The claim that antimicrobial resistance, including to tetracyclines, compromises treatment options (from PMID 39057083) is not supported by the snippet, which mentions only the disease burden.",
+          "The statement that tetracycline resistance often co‑occurs with resistance to other classes (from PMID 36688703) is not present in the provided abstract.",
+          "The suggestion that tetracycline resistance has been high for at least two decades in Southern Europe (from PMID 12582444) is not supported by the snippet."
+        ],
+        "reasoning": "The answer correctly reports the snapshot percentages and notes the lack of a true time‑series, which is grounded in the structured data. However, several literature‑based interpretations introduce unsupported factual claims, reducing overall grounding. The answer addresses the request by explaining why a trend cannot be shown and provides the available cross‑sectional data, making it mostly complete and reasonably clear."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 0,
+        "completeness": 1,
+        "clinical_clarity": 2,
+        "total_score": 3,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.2,
+        "hallucination_examples": [
+          "The statement that no structured surveillance data were retrieved is false; the evidence contains 28 rows of country‑level resistance percentages."
+        ],
+        "reasoning": "The answer correctly notes the absence of a temporal trend, but it incorrectly claims that no surveillance data were retrieved, which contradicts the provided dataset. This major factual error lowers its grounding. The response is brief and clear, but it only partially satisfies the question by stating that a trend cannot be shown without acknowledging the available snapshot data."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG provides accurate, data‑driven information about the current resistance levels and correctly explains the limitation regarding trend analysis, despite a few unsupported literature interpretations. The single‑agent RAG contains a clear factual error by claiming no surveillance data exist, resulting in lower grounding and overall score."
+    }
+  },
+  {
+    "question_id": 3,
+    "question": "How has ampicillin resistance in E. coli changed in Germany over the years?",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 2,
+        "clinical_clarity": 3,
+        "total_score": 7,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.14,
+        "hallucination_examples": [
+          "The answer claims that recent German surveillance publications support the view that ampicillin resistance has been rising in recent years, but the provided PMID 42043551 does not specifically mention ampicillin or a rising trend."
+        ],
+        "reasoning": "The answer correctly reports the current resistance level (≈50%) and notes the lack of year‑by‑year data, both directly supported by the structured dataset. It also accurately describes limitations of the data. The only unsupported factual claim is the inference that the literature confirms a rising trend for ampicillin resistance, which is not present in the cited source. Overall the answer is well‑grounded, fairly complete given the evidence, and clearly communicated."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 0,
+        "completeness": 0,
+        "clinical_clarity": 1,
+        "total_score": 1,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.5,
+        "hallucination_examples": [
+          "The answer states that the retrieved evidence does not contain any data on ampicillin resistance in E. coli in Germany, which is false because the structured data provides a 50.27% resistance figure for 2023."
+        ],
+        "reasoning": "The answer incorrectly claims that no data exist for Germany, ignoring the provided dataset that includes a specific resistance percentage. This makes the primary factual claim unsupported. Consequently the answer fails to answer the question, providing no useful information, and only minimally clear in its wording."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG answer is largely supported by the evidence, correctly reports the available resistance figure, acknowledges the lack of temporal data, and only makes one minor unsupported inference. The single‑agent answer contains a major factual error by claiming no German data exist, resulting in lower grounding, completeness, and overall quality."
+    }
+  },
+  {
+    "question_id": 4,
+    "question": "Trend of ESBL resistance in E. coli over the years",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 3,
+        "clinical_clarity": 2,
+        "total_score": 7,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.1,
+        "hallucination_examples": [
+          "The statement that ESBL‑E. coli carriage is \"sometimes increasing\" is not directly supported by the cited wastewater studies, which describe steady detection or occasional spikes rather than a clear upward trend."
+        ],
+        "reasoning": "The answer correctly reports the lack of EU surveillance data (0 rows) and accurately summarizes the four peer‑reviewed studies that are present in the provided evidence. All trend‑related factual statements are grounded in the literature. Minor over‑statement about a possible increase is the only factual claim not explicitly supported. The answer is comprehensive and clearly organized, though the many policy recommendations are not evidence‑based facts, they do not constitute hallucinations about the trend."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 1,
+        "completeness": 2,
+        "clinical_clarity": 1,
+        "total_score": 4,
+        "hallucination_count": 11,
+        "hallucination_rate": 0.58,
+        "hallucination_examples": [
+          "The claim that ESBL resistance in E. coli has been rising over recent years is not fully supported; most cited studies show steady or ongoing presence, not a clear rise.",
+          "The table of 10 rows describing resistance percentages for Salmonella species (S. Kentucky, S. Typhimurium, S. Infantis) is unrelated to E. coli and is not present in any retrieved evidence.",
+          "Interpretation that the global plasmid study implies a \"continued upward trajectory\" goes beyond the evidence, which only describes widespread dissemination."
+        ],
+        "reasoning": "While the answer cites the Swedish surveillance study and the wastewater papers, it over‑generalizes the trend and adds a large, unrelated Salmonella data table that is not in the evidence. These constitute multiple hallucinations, reducing factual grounding. The answer only partially addresses the question and is muddled by irrelevant information, leading to lower completeness and clarity."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG provides a fact‑grounded, comprehensive trend discussion based on the available evidence, with only a minor unsupported nuance. The single‑agent answer contains numerous unsupported claims, including an entirely unrelated Salmonella data table, resulting in lower factual grounding, completeness, and clarity."
+    }
+  },
+  {
+    "question_id": 5,
+    "question": "Compare ciprofloxacin resistance in E. coli across European countries",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 8,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.04,
+        "hallucination_examples": [
+          "The answer states that the ECDC 2024 report “notes that Romania and Poland consistently rank among the highest‑resistance countries,” which is not present in the retrieved snippet of the report."
+        ],
+        "reasoning": "The answer correctly extracts and reports the country‑specific resistance percentages from the provided rows and aligns most literature statements with the snippets. Only one claim about the ECDC report’s textual commentary is unsupported, so grounding is mostly solid. The answer fully addresses the comparison request, providing a comprehensive overview, and presents the information clearly."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 0,
+        "completeness": 0,
+        "clinical_clarity": 1,
+        "total_score": 1,
+        "hallucination_count": 2,
+        "hallucination_rate": 0.29,
+        "hallucination_examples": [
+          "Claims that no structured surveillance data with numeric values was retrieved, despite the presence of a detailed table of country‑level percentages in the provided rows.",
+          "States that a quantitative comparison cannot be performed, ignoring the available data that directly enable such a comparison."
+        ],
+        "reasoning": "The answer fails to use the supplied surveillance rows, incorrectly asserts the absence of data, and therefore provides an answer that is largely unsupported. It does not answer the comparison question, resulting in low completeness and grounding."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG answer utilizes the provided data to give a detailed, mostly accurate comparison of ciprofloxacin resistance across European countries, whereas the single‑agent answer ignores the available data and makes unsupported claims, leading to far lower grounding, completeness, and overall quality."
+    }
+  },
+  {
+    "question_id": 6,
+    "question": "Which countries have the highest tetracycline resistance in Salmonella?",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 3,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 9,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The answer correctly lists the countries with the highest tetracycline resistance using the provided table (Cyprus, Austria, United Kingdom‑Northern Ireland, etc.) and all quantitative statements are supported by the structured data. Recommendations and literature insights are consistent with the cited PubMed snippets. No unsupported factual claims are present."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 1,
+        "completeness": 0,
+        "clinical_clarity": 2,
+        "total_score": 3,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.2,
+        "hallucination_examples": [
+          "The claim that the evidence does not identify specific countries with the highest tetracycline resistance contradicts the provided country‑level table showing percentages for many countries."
+        ],
+        "reasoning": "The answer incorrectly states that no country‑specific data are available, despite the clear country‑level percentages in the evidence. It therefore fails to answer the question and contains a factual error, resulting in low grounding and completeness."
+      },
+      "winner": "original_rag",
+      "comparison_reason": "The original RAG answer is fully supported by the evidence, lists the correct high‑resistance countries, and provides clear, accurate information. The single‑agent answer incorrectly claims the absence of country data, leading to factual inaccuracy and an incomplete response."
+    }
+  },
+  {
+    "question_id": 7,
+    "question": "Compare vancomycin resistance in Enterococcus faecium across countries",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 1,
+        "completeness": 2,
+        "clinical_clarity": 2,
+        "total_score": 5,
+        "hallucination_count": 11,
+        "hallucination_rate": 0.46,
+        "hallucination_examples": [
+          "The absence of data may reflect either a lack of reporting for this organism‑antibiotic combination in the EARS‑Net/EFSA database at the time of extraction or a filtering issue in the query.",
+          "Empirical therapy: In settings with documented VRE (e.g., Germany, Netherlands) consider early use of linezolid, daptomycin, or high‑dose tigecycline for serious E. faecium infections; avoid vancomycin unless susceptibility is confirmed.",
+          "Stewardship: Implement vancomycin‑use audits; restrict vancomycin to cases with proven susceptibility; promote de‑escalation based on rapid diagnostics.",
+          "Diagnostics: Adopt PCR‑based vanA/vanB detection or broth microdilution for all E. faecium isolates, especially when Vitek2 is used, to avoid false‑susceptible results.",
+          "Surveillance priority: Ensure mandatory reporting of VRE E. faecium to EARS‑Net at the country level; request that laboratories submit both phenotypic MICs and molecular resistance data.",
+          "Outbreak triggers: Declare a VRE outbreak when ≥2 isolates with identical van‑genotype are identified within 30 days in the same ward; activate infection‑control bundle.",
+          "Cross‑border reporting: Countries with rising VRE (Germany, Netherlands) should share genotype data through the EuSCAPE network.",
+          "Veterinary: restrict avoparcin‑type glycopeptides in pig and poultry production.",
+          "Formulary updates: Add VRE‑active agents (linezolid, daptomycin) to essential‑medicine lists for hospitals with ≥5% (LOW)VRE prevalence (as inferred from literature).",
+          "Prescribing restrictions: Enforce pre‑authorization for vancomycin in non‑ICU wards; require susceptibility confirmation before continuation.",
+          "National action plans: Incorporate VRE monitoring targets (e.g., ≤2% (LOW)VRE among E. faecium BSI) into the next EU/EEA antimicrobial resistance action plan; fund molecular surveillance capacity."
+        ],
+        "reasoning": "The answer correctly reports the lack of surveillance data and accurately summarizes the literature that is provided. However, it adds many policy and therapeutic recommendations that are not supported by the retrieved evidence, and it speculates about reasons for missing data. These constitute numerous hallucinated factual statements, lowering the grounding score."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 3,
+        "completeness": 2,
+        "clinical_clarity": 2,
+        "total_score": 7,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The answer stays within the supplied evidence, correctly noting the absence of quantitative surveillance data and summarizing the country‑specific findings that are present in the literature. It does not introduce unsupported facts or recommendations, resulting in full grounding and a higher overall score."
+      },
+      "winner": "single_agent_rag",
+      "comparison_reason": "The single‑agent RAG answer is fully grounded in the provided evidence, contains no hallucinated statements, and adequately addresses the comparison request, whereas the original RAG answer, while largely accurate, adds many unsupported recommendations and speculative statements, leading to lower factual grounding and a lower total score."
+    }
+  },
+  {
+    "question_id": 8,
+    "question": "Which organism and antibiotic combinations have the highest resistance?",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 1,
+        "completeness": 2,
+        "clinical_clarity": 2,
+        "total_score": 5,
+        "hallucination_count": 7,
+        "hallucination_rate": 0.35,
+        "hallucination_examples": [
+          "States that S. Infantis tetracycline resistance is >70% (CRITICAL) when the data show 65.16%.",
+          "Claims ECDC reports confirm that fluoroquinolone resistance in Enterobacterales is a growing concern, which is not supported by the provided ECDC snippets.",
+          "Recommends preferring third‑generation cephalosporins as the most reliable β‑lactam class without any susceptibility data for cephalosporins in the evidence.",
+          "Suggests reserving carbapenems for XDR cases, a recommendation not grounded in the supplied data.",
+          "Advocates rapid phenotypic or molecular testing (PCR for quinolone‑resistance, ESBL genes) on all Salmonella isolates without evidence that this was discussed.",
+          "Calls for educating clinicians on limited benefit of treating uncomplicated gastroenteritis, a claim not supported by the evidence.",
+          "Public‑health actions such as setting a >80% resistance trigger and creating a EU‑wide dashboard are not mentioned in the retrieved evidence."
+        ],
+        "reasoning": "The answer contains many accurate data‑driven statements about resistance percentages, but it also adds numerous claims, recommendations, and interpretations that are not supported by the provided surveillance table or the PubMed excerpts. These unsupported statements lower the factual grounding and increase hallucination count, while the answer still addresses the question, giving it partial completeness and clarity."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 3,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 9,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The response directly reports the two organism‑antibiotic pairs with the highest resistance (S. Kentucky‑CIP and S. Kentucky‑NAL, both 93.46%) exactly as shown in the structured data, and correctly notes that no higher‑resistance combinations appear in the literature. All statements are supported by the evidence, making the answer fully grounded, complete, and clear."
+      },
+      "winner": "single_agent_rag",
+      "comparison_reason": "The single‑agent RAG answer is fully supported by the retrieved evidence, contains no hallucinations, and succinctly answers the question, whereas the original RAG includes several unsupported claims and recommendations, reducing its factual grounding and overall score."
+    }
+  },
+  {
+    "question_id": 9,
+    "question": "Show me the top 10 highest resistance combinations",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 3,
+        "clinical_clarity": 2,
+        "total_score": 7,
+        "hallucination_count": 6,
+        "hallucination_rate": 0.2,
+        "hallucination_examples": [
+          "ECDC surveillance report highlights that EU/EEA invasive isolates often show high non‑wild‑type rates for key antimicrobials.",
+          "ECDC Pseudomonas aeruginosa report demonstrates that even well‑monitored pathogens can retain high susceptibility to most agents, contrasting with the severe resistance seen in Salmonella.",
+          "ECDC Escherichia coli report shows > 50% of invasive E. coli isolates are resistant to at least one first‑line drug, mirroring the MDR trends seen in Salmonella.",
+          "ECDC incidence of bloodstream‑infection resistance report provides baseline incidence rates for resistant bloodstream infections, useful for estimating the clinical burden from Salmonella resistances.",
+          "ECDC Staphylococcus aureus report illustrates successful national action plans for MRSA, offering a model that could be adapted to Salmonella resistance.",
+          "The extremely high fluoroquinolone and β‑lactam resistance in Salmonella aligns with published concerns about veterinary fluoroquinolone use and plasmid‑mediated quinolone resistance genes (e.g., qnr, aac(6′)-Ib‑cr)."
+        ],
+        "reasoning": "The answer correctly lists the top‑10 resistant organism‑antibiotic combinations using the structured data, but it adds several literature‑based statements that are not supported by the provided PubMed snippets. These extra claims constitute hallucinations, lowering the factual grounding score while still answering the question."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 3,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 9,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The answer presents a concise table that exactly matches the structured surveillance rows, with no unsupported statements. All factual claims are directly grounded in the retrieved evidence, fully answering the query with clear presentation."
+      },
+      "winner": "single_agent_rag",
+      "comparison_reason": "The single‑agent RAG provides a fully grounded, complete, and clear answer with zero hallucinations, whereas the original RAG, while complete, includes multiple unsupported literature claims that reduce its factual grounding and introduce hallucinations."
+    }
+  },
+  {
+    "question_id": 10,
+    "question": "Is fluoroquinolone resistance in Campylobacter increasing?",
+    "judgment": {
+      "original_rag": {
+        "factual_grounding": 2,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 8,
+        "hallucination_count": 1,
+        "hallucination_rate": 0.125,
+        "hallucination_examples": [
+          "The answer states that the EU \"Farm to Fork\" targets aim for ≤5% of farms using critical fluoroquinolones, which is not mentioned in the provided evidence."
+        ],
+        "reasoning": "The answer correctly reports the lack of surveillance data and cites several peer‑reviewed studies showing increasing ciprofloxacin resistance, which are all supported by the retrieved literature. The only unsupported factual claim is the mention of specific EU \"Farm to Fork\" targets, which is not present in the evidence. Overall the answer is comprehensive and clear, but contains a minor hallucination."
+      },
+      "single_agent_rag": {
+        "factual_grounding": 3,
+        "completeness": 3,
+        "clinical_clarity": 3,
+        "total_score": 9,
+        "hallucination_count": 0,
+        "hallucination_rate": 0.0,
+        "hallucination_examples": [],
+        "reasoning": "The answer states that fluoroquinolone resistance in Campylobacter is rising and backs this with the Finland traveler study showing a rise from 40% to 60% and a Serbian study that describes resistance as \"emerging.\" Both statements are directly supported by the snippets provided. No factual claims are made beyond the evidence, and the answer is concise, directly addresses the question, and is clearly worded."
+      },
+      "winner": "single_agent_rag",
+      "comparison_reason": "The single‑agent answer is fully grounded in the evidence, contains no hallucinations, and delivers a concise, clear response, resulting in a higher total score than the original RAG answer, which had one unsupported policy claim."
+    }
+  }
+]

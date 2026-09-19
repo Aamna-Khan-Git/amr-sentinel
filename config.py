@@ -15,8 +15,8 @@ API_KEY      = os.getenv("API_KEY", "")
 API_BASE_URL = os.getenv("API_BASE_URL", "https://api.openai.com/v1")
 
 # ── Models ────────────────────────────────────────────────────────────────────
-INTENT_MODEL    = os.getenv("INTENT_MODEL",    "llama3.2:3b")
-NARRATIVE_MODEL = os.getenv("NARRATIVE_MODEL", "mistral:7b")
+INTENT_MODEL    = os.getenv("INTENT_MODEL",    "gpt-oss:20b-cloud")
+NARRATIVE_MODEL = os.getenv("NARRATIVE_MODEL", "gpt-oss:120b-cloud")
 
 # ── NCBI ──────────────────────────────────────────────────────────────────────
 NCBI_API_KEY = os.getenv("NCBI_API_KEY", "")

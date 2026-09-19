@@ -107,8 +107,29 @@ def apply_severity_labels(text: str) -> str:
 # ── LLM call ──────────────────────────────────────────────────────────────────
 
 def _call_llm(model: str, system: str, user: str, max_tokens: int = 2048) -> str:
+    base_url = API_BASE_URL.rstrip("/")
+    # Ollama Cloud uses its OpenAI-compatible endpoint.  Native /api/chat is
+    # retained for local Ollama servers.
+    if base_url.endswith("/v1"):
+        response = requests.post(
+            f"{base_url}/chat/completions",
+            headers={"Authorization": f"Bearer {API_KEY}"},
+            json={
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                "stream": False,
+                "max_tokens": max_tokens,
+            },
+            timeout=180,
+        )
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
+
     response = requests.post(
-        f"{API_BASE_URL}/api/chat",
+        f"{base_url}/api/chat",
         headers={"Authorization": f"Bearer {API_KEY}"},
         json={
             "model":   model,

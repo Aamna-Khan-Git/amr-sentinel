@@ -332,13 +332,14 @@ def backup(csv_path: Path):
 
 # ── SQLite reload ─────────────────────────────────────────────────────────────
 
-def reload_sqlite(csv_path: Path):
+def reload_sqlite(csv_path: Path, year: int):
     try:
         sys.path.insert(0, str(_ROOT))
         import db_setup
         if hasattr(db_setup, "ingest_csv"):
-            log.info("Reloading SQLite ...")
-            db_setup.ingest_csv(str(csv_path))
+            source = f"EARS_NET_{year}"
+            log.info(f"Reloading SQLite (source={source}) ...")
+            db_setup.ingest_csv(str(csv_path), source=source)
             log.info("SQLite reload complete.")
         else:
             log.warning("db_setup.ingest_csv() not found — run db_setup.py manually.")
@@ -444,7 +445,8 @@ def main():
     log.info(f"Written → {OUTPUT_CSV}")
 
     # ── Step 7: Reload SQLite ─────────────────────────────────────────
-    reload_sqlite(OUTPUT_CSV)
+    reload_year = new_year or df["year"].max()
+    reload_sqlite(OUTPUT_CSV, year=int(reload_year))
 
     # ── Step 8: Save state ────────────────────────────────────────────
     state.update({

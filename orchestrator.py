@@ -38,26 +38,26 @@ Your job is to READ the user's question carefully, UNDERSTAND what they are actu
 
 Return ONLY a valid JSON object:
 {
-  "intent":     "<trend|compare|top_resistant|list_values>",
-  "organism":   "<exact value from list or null>",
-  "antibiotic": "<exact code from list or null>",
-  "country":    "<country name or null>",
-  "year":       <integer or null>,
-  "lit_query":  "<3-8 word semantic search phrase>"
+"intent":     "<trend|compare|top_resistant|list_values>",
+"organism":   "<exact value from list or null>",
+"antibiotic": "<exact code from list or null>",
+"country":    "<country name or null>",
+"year":       <integer or null>,
+"lit_query":  "<3-8 word semantic search phrase>"
 }
 
 INTENT — infer from what the user WANTS to know:
 
 trend = user wants to see change over time
-  Logic: question contains time words (over time, increasing, decreasing, trend, years, changing, grown, risen)
-  Examples:
+Logic: question contains time words (over time, increasing, decreasing, trend, years, changing, grown, risen)
+Examples:
     "How has CIP resistance changed?" -> trend
     "Is resistance increasing?" -> trend
     "Trend of ESBL over the years" -> trend
 
 compare = user wants to compare resistance levels across countries, organisms, or sources
-  Logic: user wants to know WHICH is highest/worst/safest, or wants country/source breakdown
-  Examples:
+Logic: user wants to know WHICH is highest/worst/safest, or wants country/source breakdown
+Examples:
     "Which countries have highest resistance?" -> compare
     "Which antibiotics should I avoid in Germany?" -> compare, country=Germany
     "Which meat is safest in Bulgaria?" -> compare, country=Bulgaria
@@ -66,25 +66,25 @@ compare = user wants to compare resistance levels across countries, organisms, o
     "What is the AMR situation in Italy?" -> compare, country=Italy
 
 top_resistant = user wants an overall ranking without specifying organism or antibiotic
-  Logic: broad question about worst/highest resistance combinations, no specific pathogen mentioned
-  Examples:
+Logic: broad question about worst/highest resistance combinations, no specific pathogen mentioned
+Examples:
     "What are the most resistant combinations?" -> top_resistant
     "Show me top 10 resistance" -> top_resistant
     "Which bugs and drugs are worst?" -> top_resistant
 
 list_values = ONLY when user explicitly asks what data is available in the system
-  Logic: user is asking about the database itself, not about resistance
-  Examples:
+Logic: user is asking about the database itself, not about resistance
+Examples:
     "What organisms are in the database?" -> list_values
     "List available countries" -> list_values
-  NEVER use list_values for resistance questions.
+NEVER use list_values for resistance questions.
 
 ORGANISM — extract only if explicitly mentioned, otherwise null:
-  Do NOT guess or default. If not mentioned, return null.
-  EXACT values: C. coli, C. jejuni, E. coli, E. coli (ESBL/AmpC), E. faecalis, E. faecium,
-  S. Derby, S. Enteritidis, S. Infantis, S. Kentucky, S. Typhimurium,
-  S. Typhimurium (mono), Salmonella spp.
-  Aliases:
+Do NOT guess or default. If not mentioned, return null.
+EXACT values: C. coli, C. jejuni, E. coli, E. coli (ESBL/AmpC), E. faecalis, E. faecium,
+S. Derby, S. Enteritidis, S. Infantis, S. Kentucky, S. Typhimurium,
+S. Typhimurium (mono), Salmonella spp.
+Aliases:
     Campylobacter (alone) -> C. jejuni
     Salmonella (no serovar) -> Salmonella spp.
     Salmonella Typhimurium -> S. Typhimurium
@@ -94,10 +94,10 @@ ORGANISM — extract only if explicitly mentioned, otherwise null:
     E. coli / Escherichia coli -> E. coli
 
 ANTIBIOTIC — extract only if explicitly mentioned, otherwise null:
-  Do NOT guess or default. If not mentioned, return null.
-  EXACT codes: AMC, AMK, AMP, AZM, CAZ, CHL, CIP, COL, CTX, ERY,
-  ESBL_PHENO, ETP, GEN, LZD, MEM, NAL, QDA, SMX, SXT, TET, TGC, TMP, VAN
-  Aliases:
+Do NOT guess or default. If not mentioned, return null.
+EXACT codes: AMC, AMK, AMP, AZM, CAZ, CHL, CIP, COL, CTX, ERY,
+ESBL_PHENO, ETP, GEN, LZD, MEM, NAL, QDA, SMX, SXT, TET, TGC, TMP, VAN
+Aliases:
     ciprofloxacin / fluoroquinolone -> CIP
     ampicillin / amoxicillin -> AMP
     tetracycline -> TET
@@ -111,29 +111,50 @@ ANTIBIOTIC — extract only if explicitly mentioned, otherwise null:
     ESBL / extended spectrum -> ESBL_PHENO
 
 COUNTRY — extract ONLY if a specific nation is mentioned:
-  - "Europe", "European", "EU", "across Europe", "in Europe" -> null
-  - "I am from Germany" -> Germany
-  - "in Bulgaria" -> Bulgaria
-  - "across European countries" -> null
-  - "in Eastern Europe" -> null
-  - Only extract specific nation states, never regions or continents
+- "Europe", "European", "EU", "across Europe", "in Europe" -> null
+- "I am from Germany" -> Germany
+- "in Bulgaria" -> Bulgaria
+- "across European countries" -> null
+- "in Eastern Europe" -> null
+- Only extract specific nation states, never regions or continents
 
 DATA AWARENESS:
-  - "increasing", "decreasing", "over time", "over the years" -> trend intent
-  - The system has 2015 animal/food data and 2020-2024 human data
-  - When country=null the system queries all countries automatically
+- "increasing", "decreasing", "over time", "over the years" -> trend intent
+- The system has 2015 animal/food data and 2020-2024 human data
+- When country=null the system queries all countries automatically
 
 lit_query — 3-8 word PubMed search phrase:
-  "I am from Germany, which antibiotics to avoid" -> "antimicrobial resistance Germany food chain"
-  "Which meat is safest in Bulgaria" -> "Salmonella AMR Bulgaria meat"
+"I am from Germany, which antibiotics to avoid" -> "antimicrobial resistance Germany food chain"
+"Which meat is safest in Bulgaria" -> "Salmonella AMR Bulgaria meat"
 "Which country has the best/worst AMR" -> compare, all organisms, no country filter
 "Which country is safest" -> compare
 Return ONLY the JSON object. No explanation. No markdown."""
 
 
 def _call_llm(model: str, system: str, user: str, max_tokens: int = 256) -> str:
+    base_url = API_BASE_URL.rstrip("/")
+    # Ollama Cloud is accessed through its OpenAI-compatible endpoint.  Keep
+    # the native /api/chat route for local Ollama installations.
+    if base_url.endswith("/v1"):
+        response = requests.post(
+            f"{base_url}/chat/completions",
+            headers={"Authorization": f"Bearer {API_KEY}"},
+            json={
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                "stream": False,
+                "max_tokens": max_tokens,
+            },
+            timeout=120,
+        )
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
+
     response = requests.post(
-        f"{API_BASE_URL}/api/chat",
+        f"{base_url}/api/chat",
         headers={"Authorization": f"Bearer {API_KEY}"},
         json={
             "model":   model,
@@ -206,10 +227,12 @@ def ask(question: str, k_literature: int = 5, db_path: str = DATABASE_PATH) -> d
 
 def _parse_intent(question: str) -> dict:
     try:
-        raw_text = _call_llm(INTENT_MODEL, INTENT_SYSTEM, question, max_tokens=256)
+        raw_text = _call_llm(INTENT_MODEL, INTENT_SYSTEM, question, max_tokens=1024)
+        print(f"RAW MODEL RESPONSE: {repr(raw_text)}")   # debug line — see exactly what came back
         raw_text = re.sub(r"^```(?:json)?\s*", "", raw_text)
         raw_text = re.sub(r"\s*```$", "", raw_text)
-        return json.loads(raw_text)
+        parsed = json.loads(raw_text)
+        return parsed
     except json.JSONDecodeError as exc:
         logger.error("Failed to parse intent JSON: %s", exc)
         return {"_error": f"JSON decode: {exc}"}

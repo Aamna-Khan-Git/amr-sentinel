@@ -5,6 +5,11 @@ Ingests PubMed abstracts into ChromaDB and provides semantic search.
 ChromaDB path is read from config (CHROMA_PATH env var).
 """
 
+import os
+
+# Disable ChromaDB telemetry to prevent telemetry errors/noise.
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
 import json
 import csv
 import logging
@@ -37,16 +42,6 @@ def _get_collection(chroma_dir: str = CHROMA_DIR) -> chromadb.Collection:
     )
     _COLLECTION_CACHE[chroma_dir] = col
     return col
-
-def _get_collection(chroma_dir: str = CHROMA_DIR) -> chromadb.Collection:
-    client = chromadb.PersistentClient(path=chroma_dir)
-    ef     = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
-    return client.get_or_create_collection(
-        name=COLLECTION_NAME,
-        embedding_function=ef,
-        metadata={"hnsw:space": "cosine"},
-    )
-
 
 def _load_records_jsonl(path: str) -> list[dict]:
     records = []

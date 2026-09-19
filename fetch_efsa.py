@@ -1,14 +1,25 @@
 """
 fetch_efsa.py
 -------------
-Fetches and ingests the EU One Health 2022-2023 AMR Zoonoses data
-from Zenodo (doi: 10.5281/zenodo.14645440) into amr_sentinel.db.
+Fetches and ingests EU One Health AMR Zoonoses data from Zenodo into
+amr_sentinel.db.
 
-Sources:
+Sources per release:
 - Annex C: Indicator E. coli (pigs, cattle, broilers, turkeys, meat)
 - Annex A.2: Salmonella in food-producing animals
+
+Multi-year ingest: each Zenodo release covers one or more reporting years
+under a single record (doi/record id). To add a year, add an entry to
+RELEASES below with that year's Zenodo record id and reporting year, then
+run with --year <YEAR> or --all-years. Re-running a year only replaces
+that year's EFSA rows (DELETE is scoped to source=EFSA_ECDC_<YEAR>), so
+prior years already in the DB are untouched.
+
+Usage:
+    python3 fetch_efsa.py --year 2023
+    python3 fetch_efsa.py --all-years
 """
-import os, sys, logging, requests, sqlite3
+import os, sys, logging, argparse, requests, sqlite3
 from pathlib import Path
 from io import BytesIO
 import openpyxl
@@ -22,11 +33,23 @@ DB_PATH   = os.getenv("DATABASE_PATH", "amr_sentinel.db")
 DATA_DIR  = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
-ZENODO_BASE = "https://zenodo.org/records/14645440/files"
-
-FILES = {
-    "ecoli":      f"{ZENODO_BASE}/Annex%20C_Indicator%20E.%20coli_EFSA-ECDC_EUSR_AMR_2022-2023.xlsm?download=1",
-    "salmonella": f"{ZENODO_BASE}/Annex%20A.2_Salmonella_food_producing_animals_EFSA-ECDC_EUSR_AMR_2022-2023.xlsm?download=1",
+# ── Known releases ────────────────────────────────────────────────────
+# One entry per EFSA-ECDC EU Summary Report. Add prior years here as you
+# source their Zenodo record ids — each is a separate DOI/record, not a
+# parameter on today's one. The 2022-2023 entry below is the release this
+# script originally shipped with; verify the file naming is unchanged
+# before trusting a newly-added year without a manual check.
+RELEASES = {
+    2023: {
+        "zenodo_base": "https://zenodo.org/records/14645440/files",
+        "ecoli":      "Annex%20C_Indicator%20E.%20coli_EFSA-ECDC_EUSR_AMR_2022-2023.xlsm?download=1",
+        "salmonella": "Annex%20A.2_Salmonella_food_producing_animals_EFSA-ECDC_EUSR_AMR_2022-2023.xlsm?download=1",
+    },
+    # 2022: {
+    #     "zenodo_base": "https://zenodo.org/records/<record_id>/files",
+    #     "ecoli":       "<filename>.xlsm?download=1",
+    #     "salmonella":  "<filename>.xlsm?download=1",
+    # },
 }
 
 # Map sheet names to source_type labels
@@ -49,9 +72,7 @@ SALMONELLA_SHEETS = {
 }
 
 ANTIBIOTICS = ["GEN","AMK","CHL","AMP","CTX","CAZ","MEM","TGC",
-               "NAL","CIP","AZM","COL","SMX","TMP","TET"]
-
-YEAR = 2023  # data covers 2022-2023 reporting period
+            "NAL","CIP","AZM","COL","SMX","TMP","TET"]
 
 
 def download_file(url: str, dest: Path) -> Path:
@@ -89,7 +110,7 @@ def parse_pct(val):
         return None
 
 
-def ingest_ecoli(conn, path: Path):
+def ingest_ecoli(conn, path: Path, year: int):
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
     inserted = 0
     for sheet_name, source_type in ECOLI_SHEETS.items():
@@ -122,16 +143,16 @@ def ingest_ecoli(conn, path: Path):
                 conn.execute("""
                     INSERT INTO amr_data
                     (country, year, organism, antibiotic, pct_resistant,
-                     total_isolates, source, source_type)
+                    total_isolates, source, source_type)
                     VALUES (?,?,?,?,?,?,?,?)
-                """, (str(country).strip(), YEAR, "E. coli", ab,
-                      pct, n_isolates, "EFSA_ECDC_2023", source_type))
+                """, (str(country).strip(), year, "E. coli", ab,
+                    pct, n_isolates, f"EFSA_ECDC_{year}", source_type))
                 inserted += 1
     conn.commit()
     log.info("E. coli: inserted %d rows", inserted)
 
 
-def ingest_salmonella(conn, path: Path):
+def ingest_salmonella(conn, path: Path, year: int):
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
     inserted = 0
     for sheet_name, (organism, source_type) in SALMONELLA_SHEETS.items():
@@ -165,33 +186,76 @@ def ingest_salmonella(conn, path: Path):
                     (country, year, organism, antibiotic, pct_resistant,
                      total_isolates, source, source_type)
                     VALUES (?,?,?,?,?,?,?,?)
-                """, (str(country).strip(), YEAR, organism, ab,
-                      pct, n_isolates, "EFSA_ECDC_2023", source_type))
+                """, (str(country).strip(), year, organism, ab,
+                      pct, n_isolates, f"EFSA_ECDC_{year}", source_type))
                 inserted += 1
     conn.commit()
     log.info("Salmonella: inserted %d rows", inserted)
 
 
-def main():
-    conn = get_connection()
+def ingest_year(conn, year: int):
+    if year not in RELEASES:
+        log.error("No release registered for year %d. Add it to RELEASES.", year)
+        return False
 
-    # Remove old EFSA data before re-ingesting
-    conn.execute("DELETE FROM amr_data WHERE source LIKE 'EFSA%'")
+    release = RELEASES[year]
+    base    = release["zenodo_base"]
+
+    # Scoped delete: only this year's EFSA rows, so re-running one year
+    # never touches other years already in the DB.
+    source = f"EFSA_ECDC_{year}"
+    deleted = conn.execute(
+        "DELETE FROM amr_data WHERE source = ?", (source,)
+    ).rowcount
     conn.commit()
-    log.info("Cleared old EFSA data")
+    log.info("Cleared %d existing rows for %s (idempotent re-run)", deleted, source)
 
-    ecoli_path      = download_file(FILES["ecoli"],
-                                    DATA_DIR / "efsa_ecoli_2023.xlsm")
-    salmonella_path = download_file(FILES["salmonella"],
-                                    DATA_DIR / "efsa_salmonella_2023.xlsm")
+    ecoli_path = download_file(
+        f"{base}/{release['ecoli']}", DATA_DIR / f"efsa_ecoli_{year}.xlsm"
+    )
+    salmonella_path = download_file(
+        f"{base}/{release['salmonella']}", DATA_DIR / f"efsa_salmonella_{year}.xlsm"
+    )
 
-    ingest_ecoli(conn, ecoli_path)
-    ingest_salmonella(conn, salmonella_path)
+    ingest_ecoli(conn, ecoli_path, year)
+    ingest_salmonella(conn, salmonella_path, year)
 
     total = conn.execute(
-        "SELECT COUNT(*) FROM amr_data WHERE source='EFSA_ECDC_2023'"
+        "SELECT COUNT(*) FROM amr_data WHERE source = ?", (source,)
     ).fetchone()[0]
-    log.info("Total EFSA 2023 rows in DB: %d", total)
+    log.info("Total %s rows in DB: %d", source, total)
+    return True
+
+
+def main():
+    parser = argparse.ArgumentParser(description="EFSA-ECDC AMR data fetcher")
+    parser.add_argument("--year", type=int, help="Ingest a single reporting year")
+    parser.add_argument("--all-years", action="store_true",
+                        help="Ingest every year registered in RELEASES")
+    args = parser.parse_args()
+
+    conn = get_connection()
+
+    if args.all_years:
+        years = sorted(RELEASES)
+    elif args.year:
+        years = [args.year]
+    else:
+        # Default: only the most recent registered year, to match the
+        # script's old single-year behaviour when run with no flags.
+        years = [max(RELEASES)]
+        log.info("No --year given — defaulting to latest registered year %d. "
+                "Use --all-years to (re)ingest every registered year.", years[0])
+
+    for year in years:
+        ingest_year(conn, year)
+
+    overall = conn.execute(
+        "SELECT MIN(year), MAX(year), COUNT(DISTINCT year) FROM amr_data "
+        "WHERE source LIKE 'EFSA%'"
+    ).fetchone()
+    log.info("EFSA data in DB now spans %s–%s across %d year(s)", *overall)
+
     conn.close()
 
 
