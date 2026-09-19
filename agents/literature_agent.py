@@ -43,7 +43,7 @@ def build_literature_context(hits: list[dict], max_chars: int = 3000) -> str:
     parts, total_chars = [], 0
     for hit in hits:
         entry = (f"[{hit['rank']}] PMID {hit['pmid']} ({hit['year']}) - {hit['title']}\n"
-                 f"    {hit['authors']}\n    {hit['journal']}\n    Snippet: {hit['snippet']}\n")
+                f"    {hit['authors']}\n    {hit['journal']}\n    Snippet: {hit['snippet']}\n")
         if total_chars + len(entry) > max_chars:
             break
         parts.append(entry)

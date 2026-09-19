@@ -296,61 +296,151 @@ def eval_severity_labels(result: dict) -> dict:
 
 def eval_answer_quality(question: str, answer: str, data_rows: list) -> dict:
     """
-    LLM-as-judge: scores answer quality 0-3 on three axes (9 total).
-    Uses the model defined in config (NARRATIVE_MODEL) via the configured API.
-    Only called when at least one rule-based check has already failed.
+    LLM-as-judge for AMR answer quality.
+
+    The judge evaluates the generated answer against the structured data
+    actually returned by the RAG pipeline. This is deliberately separate
+    from PMID hallucination checking: a response can contain no fake PMID
+    and still be factually wrong, incomplete, or unsupported.
+
+    Scores each criterion from 0-3:
+      3 = fully correct
+      2 = mostly correct / minor issue
+      1 = partially correct / important omission
+      0 = wrong, misleading, or unsupported
+
+    The judge is expected to return JSON only.
     """
     try:
         from config import API_KEY, API_BASE_URL, NARRATIVE_MODEL
 
-        data_summary = json.dumps(data_rows[:5], indent=2) if data_rows else "No data returned"
-        answer_trunc = answer[:800] + ("…" if len(answer) > 800 else "")
+        # Keep enough context for the judge to see the relevant structured
+        # evidence. Unlike the old judge, do not arbitrarily reduce this to
+        # five rows when the returned dataset is small enough to fit.
+        rows_for_judge = data_rows[:20] if data_rows else []
+        data_summary = json.dumps(rows_for_judge, indent=2, ensure_ascii=False)
 
-        prompt = f"""You are evaluating an AMR (antimicrobial resistance) surveillance system.
+        answer_for_judge = answer[:2500] + ("…" if len(answer) > 2500 else "")
 
-Question: {question}
+        prompt = f"""You are an expert evaluator for an antimicrobial resistance (AMR)
+surveillance RAG system.
 
-Data provided to the system (first 5 rows):
-{data_summary}
+Your task is to evaluate the SYSTEM ANSWER using ONLY the evidence supplied
+in DATA RETURNED BY THE SYSTEM. Do not invent missing evidence and do not
+assume that a claim is true merely because it sounds scientifically plausible.
 
-System answer (truncated to 800 chars):
-{answer_trunc}
+QUESTION:
+{question}
 
-Rate on exactly these three criteria. Reply ONLY with valid JSON, no markdown fences.
+DATA RETURNED BY THE SYSTEM:
+{data_summary if data_summary else "No structured data rows were returned."}
+
+SYSTEM ANSWER:
+{answer_for_judge}
+
+Evaluate these five criteria independently.
+
+1. factual_correctness
+   Does the answer state values, organisms, antibiotics, countries, trends,
+   comparisons, or conclusions that are consistent with the supplied data?
+
+2. evidence_grounding
+   Are the substantive claims supported by the supplied data?
+   If the answer says that information is unavailable, check whether the
+   supplied data actually contains that information. An incorrect claim
+   that data is unavailable is a grounding failure.
+
+3. completeness
+   Does the answer actually answer what the question asks?
+   Missing the requested numerical value, country, comparison, trend, etc.
+   should reduce this score.
+
+4. hallucination
+   Did the answer introduce factual information that is not supported by
+   the supplied data? This includes invented percentages, isolate counts,
+   countries, trends, or other unsupported factual claims.
+   Do NOT call an answer a hallucination merely because it is incomplete;
+   distinguish omission/retrieval failure from invented information.
+
+5. scientific_clarity
+   Is the answer clear, precise, and scientifically appropriate for an AMR
+   surveillance context? It should not overstate what the data supports.
+
+Important:
+- The DATA RETURNED BY THE SYSTEM is the evidence available to the judge.
+- If the data contains a requested value and the answer says no value is
+  available, mark factual_correctness, evidence_grounding, and completeness
+  down.
+- If the answer invents a value absent from the data, mark hallucination down.
+- Do not penalize an answer for not mentioning information that was not
+  necessary to answer the question.
+- Judge the answer, not the quality of the retrieval system itself.
+
+Return ONLY valid JSON with exactly this structure:
 
 {{
-  "factual_grounding": {{"score": 0, "comment": "one sentence"}},
-  "completeness":      {{"score": 0, "comment": "one sentence"}},
-  "clinical_clarity":  {{"score": 0, "comment": "one sentence"}}
+  "factual_correctness": {{"score": 0, "comment": "one concise sentence"}},
+  "evidence_grounding":  {{"score": 0, "comment": "one concise sentence"}},
+  "completeness":         {{"score": 0, "comment": "one concise sentence"}},
+  "hallucination":        {{"score": 0, "comment": "one concise sentence"}},
+  "scientific_clarity":   {{"score": 0, "comment": "one concise sentence"}}
 }}
 
-Scoring: 3=fully correct, 2=mostly correct/minor gap, 1=partial/missing key info, 0=wrong/misleading
-factual_grounding: Does the answer only use data actually in the provided rows?
-completeness: Does it fully address the question?
-clinical_clarity: Is it clear and clinically appropriate?"""
+Scoring:
+3 = fully correct
+2 = mostly correct, only a minor issue
+1 = partially correct, important issue or omission
+0 = wrong, misleading, or unsupported
+"""
 
         response = requests.post(
             f"{API_BASE_URL}/api/chat",
             headers={"Authorization": f"Bearer {API_KEY}"},
             json={
-                "model":   NARRATIVE_MODEL,
+                "model": NARRATIVE_MODEL,
                 "messages": [{"role": "user", "content": prompt}],
-                "stream":  False,
-                "options": {"num_predict": 300},
+                "stream": False,
+                "options": {"num_predict": 500},
             },
             timeout=120,
         )
         response.raise_for_status()
-        raw    = response.json()["message"]["content"].strip()
-        raw    = re.sub(r"```json|```", "", raw).strip()
+
+        raw = response.json()["message"]["content"].strip()
+        raw = re.sub(r"```json|```", "", raw).strip()
         scores = json.loads(raw)
-        total  = sum(v["score"] for v in scores.values())
+
+        required = {
+            "factual_correctness",
+            "evidence_grounding",
+            "completeness",
+            "hallucination",
+            "scientific_clarity",
+        }
+        if set(scores.keys()) != required:
+            raise ValueError(
+                f"Judge returned unexpected criteria: {list(scores.keys())}"
+            )
+
+        for criterion in required:
+            score = scores[criterion].get("score")
+            comment = scores[criterion].get("comment")
+            if not isinstance(score, int) or score < 0 or score > 3:
+                raise ValueError(f"Invalid score for {criterion}: {score}")
+            if not isinstance(comment, str):
+                raise ValueError(f"Invalid comment for {criterion}")
+
+        total = sum(v["score"] for v in scores.values())
+        max_score = 15
+
         return {
             "skipped": False,
-            "scores":  scores,
-            "total":   total,
-            "pct":     round(total / 9, 3),
+            "scores": scores,
+            "total": total,
+            "max_score": max_score,
+            "pct": round(total / max_score, 3),
         }
+
     except Exception as e:
         return {"skipped": True, "reason": str(e)}
 
@@ -417,7 +507,7 @@ def print_report(
     print(f"\n  {'─'*(W-2)}")
     print(f"  {'Overall Score':<35} {'':>8}   {_bar(overall)}  {_pct(overall)}")
     print(f"{'═'*W}")
-    print(f"  * LLM judge runs on all questions (gemma3:27b via Ollama)\n")
+    print(f"  * LLM judge runs on all questions (configured NARRATIVE_MODEL)\n")
 
     if failures:
         print(f"  FAILURES ({len(failures)} question(s) had at least one issue)\n")
@@ -536,7 +626,7 @@ def run_evaluation(verbose: bool = False) -> dict:
 
         if not aq.get("skipped"):
             llm_score_total += aq["total"]
-            llm_score_count += 9
+            llm_score_count += aq.get("max_score", 15)
             if aq["pct"] < 0.75:
                 for criterion, v in aq["scores"].items():
                     if v["score"] < 2:

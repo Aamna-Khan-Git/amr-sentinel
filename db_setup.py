@@ -53,10 +53,14 @@ def get_connection(db_path: str = DB_PATH) -> sqlite3.Connection:
     return conn
 
 
-def ingest_csv(csv_path: str = CSV_PATH, db_path: str = DB_PATH) -> int:
+def ingest_csv(csv_path: str = CSV_PATH, db_path: str = DB_PATH,
+            source: str = "EARS_NET", replace: bool = False) -> int:
     """
-    Read csv_path and reload the amr_data table.
-    Called automatically by fetch_efsa.py and pdf_ingest.py after data updates.
+    Read csv_path and load it into amr_data.
+
+    By default this only replaces rows matching `source` (scoped delete),
+    so EARS-Net loads no longer wipe EFSA or other sources' history.
+    Pass replace=True to restore the old full-table-wipe behaviour.
     """
     if not Path(csv_path).exists():
         raise FileNotFoundError(f"CSV not found: {csv_path}")
@@ -70,7 +74,7 @@ def ingest_csv(csv_path: str = CSV_PATH, db_path: str = DB_PATH) -> int:
     for col, default in [
         ("pct_resistant",  None),
         ("total_isolates", 0),
-        ("source",         "ORIGINAL"),
+        ("source",         source),
         ("source_type",    "human"),
     ]:
         if col not in df.columns:
@@ -78,19 +82,23 @@ def ingest_csv(csv_path: str = CSV_PATH, db_path: str = DB_PATH) -> int:
 
     # Keep only DB columns
     db_cols = ["country", "year", "organism", "antibiotic",
-               "pct_resistant", "total_isolates", "source", "source_type"]
+            "pct_resistant", "total_isolates", "source", "source_type"]
     df = df[[c for c in db_cols if c in df.columns]]
 
     conn = get_connection(db_path)
     with conn:
-        conn.execute("DROP TABLE IF EXISTS amr_data;")
         conn.execute(CREATE_TABLE_SQL)
         for sql in CREATE_INDEX_SQL:
             conn.execute(sql)
+        if replace:
+            conn.execute("DROP TABLE IF EXISTS amr_data;")
+            conn.execute(CREATE_TABLE_SQL)
+        else:
+            conn.execute("DELETE FROM amr_data WHERE source = ?;", (source,))
         df.to_sql("amr_data", conn, if_exists="append", index=False)
 
     rows = len(df)
-    print(f"[db_setup] Loaded {rows} rows into '{db_path}'.")
+    print(f"[db_setup] Loaded {rows} rows into '{db_path}' (source={source}).")
     return rows
 
 
@@ -110,30 +118,30 @@ def query_trend(
     if country:
         sql = """
             SELECT year,
-                   country,
-                   ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
-                   SUM(total_isolates)          AS total_isolates
+            country,
+            ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
+            SUM(total_isolates)          AS total_isolates
             FROM amr_data
             WHERE LOWER(organism)   = LOWER(:organism)
-              AND LOWER(antibiotic) = LOWER(:antibiotic)
-              AND LOWER(country)    = LOWER(:country)
+            AND LOWER(antibiotic) = LOWER(:antibiotic)
+            AND LOWER(country)    = LOWER(:country)
             GROUP BY year, country
             ORDER BY year;
         """
         params = {"organism": organism, "antibiotic": antibiotic, "country": country}
     else:
         sql = """
-            SELECT year,
-                   ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
-                   SUM(total_isolates)          AS total_isolates,
-                   COUNT(DISTINCT country)      AS n_countries
-            FROM amr_data
-            WHERE LOWER(organism)   = LOWER(:organism)
-              AND LOWER(antibiotic) = LOWER(:antibiotic)
-            GROUP BY year
-            ORDER BY year;
-        """
-        params = {"organism": organism, "antibiotic": antibiotic}
+        SELECT year,
+        ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
+        SUM(total_isolates) AS total_isolates,
+        COUNT(DISTINCT country) AS n_countries
+        FROM amr_data
+        WHERE LOWER(organism) = LOWER(:organism)
+        AND LOWER(antibiotic) = LOWER(:antibiotic)
+        GROUP BY year
+        ORDER BY year;
+    """
+    params = {"organism": organism, "antibiotic": antibiotic}
 
     rows = conn.execute(sql, params).fetchall()
     conn.close()
@@ -191,10 +199,10 @@ def query_top_resistant_pairs(
     where_clause = ("WHERE " + " AND ".join(filters)) if filters else "WHERE country != 'EU/EEA'"
     sql = f"""
         SELECT organism,
-               antibiotic,
-               ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
-               SUM(total_isolates)          AS total_isolates,
-               COUNT(DISTINCT country)      AS n_countries
+            antibiotic,
+            ROUND(AVG(pct_resistant), 2) AS avg_pct_resistant,
+            SUM(total_isolates)          AS total_isolates,
+            COUNT(DISTINCT country) AS n_countries
         FROM amr_data
         {where_clause}
         GROUP BY organism, antibiotic
@@ -223,4 +231,4 @@ def list_distinct_values(field: str, db_path: str = DB_PATH) -> list[str]:
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    ingest_csv(replace=True)
+    ingest_csv()

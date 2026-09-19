@@ -1,6 +1,8 @@
 name: Update AMR surveillance data
 
 on:
+  permissions:
+    contents: write
   schedule:
     - cron: '0 6 1 11 *'
   workflow_dispatch:

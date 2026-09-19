@@ -1,0 +1,10 @@
+{
+  "system": "Single-Agent RAG",
+  "evaluation_file": "ragas_single_30.json",
+  "questions": 32,
+  "faithfulness_valid": 31,
+  "answer_relevancy_valid": 31,
+  "failed_question": [22],
+  "average_faithfulness": 0.5214408474370523,
+  "average_answer_relevancy": 0.34795818250168814
+}

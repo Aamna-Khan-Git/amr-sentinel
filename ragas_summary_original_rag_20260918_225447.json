@@ -1,0 +1,10 @@
+{
+  "system": "Original RAG",
+  "evaluation_file": "ragas_original_30.json",
+  "questions": 32,
+  "faithfulness_valid": 32,
+  "answer_relevancy_valid": 32,
+  "failed_questions": [],
+  "average_faithfulness": 0.10241234354132162,
+  "average_answer_relevancy": 0.5418265794124224
+}
